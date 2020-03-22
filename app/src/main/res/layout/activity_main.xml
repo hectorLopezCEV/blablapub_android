@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vistaContenedora"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="top"
+        android:text="BlaBlaPub"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        tools:fontFamily="cursive" />
+
+    <ImageView
+        android:id="@+id/imagenApp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:foregroundGravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:onClick="abrirRegistro"
+        android:padding="10dp"
+        android:text="registro" />
+
+
+    <LinearLayout
+        android:id="@+id/vistaRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellidos"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edad"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:hint="Edad"
+            android:inputType="number"
+            android:maxLength="2"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hombre" />
+
+            <RadioButton
+                android:id="@+id/mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mujer" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/aceptarCondiciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acepto condiciones de uso"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/registrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inscribirse"
+            android:text=""
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
