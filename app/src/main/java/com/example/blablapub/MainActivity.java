@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -16,11 +17,17 @@ import android.widget.Toast;
 
 public abstract class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
-
-
+    Button login;
     Button registro;
+    Button recovery;
     ImageView imagenTarta;
 
+    LinearLayout vistaLogin;
+    EditText loginEmail;
+    EditText loginPassword;
+    Button loginButton;
+
+    LinearLayout vistaRegistro;
     EditText nombre;
     EditText apellidos;
     EditText edad;
@@ -35,58 +42,70 @@ public abstract class MainActivity extends AppCompatActivity implements Compound
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        login = findViewById(R.id.login);
         registro = findViewById(R.id.registro);
+        recovery = findViewById(R.id.recovery);
         imagenTarta = findViewById(R.id.imagenApp);
 
+        vistaLogin = findViewById(R.id.vistaLogin);
+        loginEmail = findViewById(R.id.loginEmail);
+        loginPassword = findViewById(R.id.loginPassword);
+        loginButton = findViewById(R.id.loginButton);
+
+        vistaRegistro = findViewById(R.id.vistaRegistro);
         nombre = findViewById(R.id.nombre);
         apellidos = findViewById(R.id.apellidos);
         edad = findViewById(R.id.edad);
         sexo = findViewById(R.id.sexo);
-        hombre = findViewById(R.id.hombre);
-        mujer = findViewById(R.id.mujer);
         siHaAceptadoPoliticaUso = findViewById(R.id.aceptarCondiciones);
         registrarme = findViewById(R.id.registrarse);
 
         siHaAceptadoPoliticaUso.setOnCheckedChangeListener(this);
     }
 
+    public void abrirLogin(View vista) {
+        login.setVisibility(View.GONE);
+        registro.setVisibility(View.GONE);
+
+        vistaLogin.setVisibility(View.VISIBLE);
+
+        loginEmail.setText("");
+        loginPassword.setText("");
+    }
+
+    public void backToMain(View vista) {
+        login.setVisibility(View.VISIBLE);
+        registro.setVisibility(View.VISIBLE);
+
+        vistaLogin.setVisibility(View.GONE);
+    }
+
     /*
     Oculta la presentación y visualiza los campos de entrada de datos
      */
-    public void abrirRegistro(View vista){
-
+    public void abrirRegistro(View vista) {
+        login.setVisibility(View.GONE);
         registro.setVisibility(View.GONE);
 
-        nombre.setVisibility(View.VISIBLE);
+        vistaRegistro.setVisibility(View.VISIBLE);
+
         nombre.setText("");
-        apellidos.setVisibility(View.VISIBLE);
         apellidos.setText("");
-        edad.setVisibility(View.VISIBLE);
         edad.setText("");
-        sexo.setVisibility(View.VISIBLE);
         sexo.clearCheck();
 
-        siHaAceptadoPoliticaUso.setVisibility(View.VISIBLE);
         siHaAceptadoPoliticaUso.setChecked(false);
-        registrarme.setVisibility(View.VISIBLE);
     }
 
     /*
     Oculta los campos de datos y visualiza la presentación
      */
-    public void ocultaRegistro(View vista){
+    public void ocultaRegistro(View vista) {
         imagenTarta.setVisibility(View.VISIBLE);
         registro.setVisibility(View.VISIBLE);
 
-        nombre.setVisibility(View.GONE);
-        apellidos.setVisibility(View.GONE);
-        edad.setVisibility(View.GONE);
-        sexo.setVisibility(View.GONE);
-        siHaAceptadoPoliticaUso.setVisibility(View.GONE);
-        registrarme.setVisibility(View.GONE);
+        vistaRegistro.setVisibility(View.GONE);
     }
-
 
 
     /*
@@ -94,23 +113,21 @@ public abstract class MainActivity extends AppCompatActivity implements Compound
     y si es así muestra el Toast correspondiente y oculta los campos de datos
     y visualiza la presntación para permitir otro registro
      */
-    public void inscribirse(View vista){
-        Toast toastKO = Toast.makeText(this,"Faltan datos. Por favor complete la información solicitada",
+    public void inscribirse(View vista) {
+        Toast toastKO = Toast.makeText(this, "Faltan datos. Por favor complete la información solicitada",
                 Toast.LENGTH_LONG);
-        Toast toastOK = Toast.makeText(this,"Gracias "+nombre.getText()+" ¡La inscripción se ha hecho con éxito!",
-                Toast.LENGTH_LONG);
-
-        Toast toastMenorEdad = Toast.makeText(this,"Los participantes deben ser mayores de edad",
+        Toast toastOK = Toast.makeText(this, "Gracias " + nombre.getText() + " ¡La inscripción se ha hecho con éxito!",
                 Toast.LENGTH_LONG);
 
-        int edadConcursante=0;
+        Toast toastMenorEdad = Toast.makeText(this, "Los participantes deben ser mayores de edad",
+                Toast.LENGTH_LONG);
+
+        int edadConcursante = 0;
         boolean edadOK = false;
-        if( edad.getText().length()>0 ) {
+        if (edad.getText().length() > 0) {
             edadConcursante = Integer.parseInt(edad.getText().toString());
         }
-        if(edadConcursante <18){
-            edadOK = false;
-        }else{
+        if (edadConcursante >= 18) {
             edadOK = true;
         }
 
@@ -118,20 +135,20 @@ public abstract class MainActivity extends AppCompatActivity implements Compound
         boolean todoDatosOK = false;
 
         todoDatosOK = (nombre.getText().length() > 0) && (apellidos.getText().length() > 0) && (edad.getText().length() > 0)
-                && ( hombre.isChecked() || mujer.isChecked()) &&
-                ( (siHaAceptadoPoliticaUso.isChecked() ) ||
-                        (siHaAceptadoPoliticaUso.isChecked()==false) );
+                && (hombre.isChecked() || mujer.isChecked()) &&
+                ((siHaAceptadoPoliticaUso.isChecked()) ||
+                        (siHaAceptadoPoliticaUso.isChecked() == false));
 
         todoOK = todoDatosOK && edadOK;
-        //Si todo bien guardar
-        if(todoOK) {
+        //Si tod o bien guardar
+        if (todoOK) {
             toastOK.show();
             ocultaRegistro(vista);
         }
-        if(!todoDatosOK){
+        if (!todoDatosOK) {
             toastKO.show();
         }
-        if(todoDatosOK && !edadOK){
+        if (todoDatosOK && !edadOK) {
             toastMenorEdad.show();
         }
 
