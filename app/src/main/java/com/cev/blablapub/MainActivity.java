@@ -1,21 +1,20 @@
-package com.example.blablapub;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.cev.blablapub;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.LinearLayout;
+import android.widget.CompoundButton;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     Button login;
     Button registro;
@@ -42,6 +41,7 @@ public abstract class MainActivity extends AppCompatActivity implements Compound
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Se establecen las propiedades de este objeto
         login = findViewById(R.id.login);
         registro = findViewById(R.id.registro);
         recovery = findViewById(R.id.recovery);
@@ -152,5 +152,15 @@ public abstract class MainActivity extends AppCompatActivity implements Compound
             toastMenorEdad.show();
         }
 
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        //TODO: hacer lo que sea cuando se cambie el checkbox
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        //TODO: hacer lo que sea cuando se cambie el checkbox
     }
 }

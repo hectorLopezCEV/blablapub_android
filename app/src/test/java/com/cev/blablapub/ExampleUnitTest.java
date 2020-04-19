@@ -1,4 +1,4 @@
-package com.example.blablapub;
+package com.cev.blablapub;
 
 import org.junit.Test;
 
