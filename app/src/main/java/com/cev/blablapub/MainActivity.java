@@ -1,7 +1,10 @@
 package com.cev.blablapub;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -14,7 +17,7 @@ import android.widget.CompoundButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener  {
 
     Button login;
     Button registro;
@@ -36,10 +39,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     CheckBox siHaAceptadoPoliticaUso;
     Button registrarme;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         // Se establecen las propiedades de este objeto
         login = findViewById(R.id.login);
@@ -152,6 +159,12 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             toastMenorEdad.show();
         }
 
+    }
+
+    // metodo para navegar al Activiti recuperar contraseña
+    public void recuperarCon (View view){
+        Intent intent = new Intent(this,RecuperarCon.class);
+        startActivity(intent);
     }
 
     @Override
