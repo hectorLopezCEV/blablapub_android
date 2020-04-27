@@ -14,6 +14,8 @@ import android.widget.CompoundButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     Button login;
@@ -78,6 +80,17 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         registro.setVisibility(View.VISIBLE);
 
         vistaLogin.setVisibility(View.GONE);
+    }
+
+    public void login(View view) {
+        HashMap<String, String> parameters = new HashMap<>();
+
+        parameters.put("email", this.loginEmail.getText().toString());
+        parameters.put("password", this.loginPassword.getText().toString());
+
+        LoginService loginService = new LoginService(this);
+
+        loginService.execute(parameters);
     }
 
     /*
