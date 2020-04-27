@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Blablapub</string>
+    <string name="base_endpoing">http://127.0.0.1:8000/api/</string>
 </resources>
