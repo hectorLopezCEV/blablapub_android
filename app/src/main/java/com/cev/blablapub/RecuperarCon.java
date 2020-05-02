@@ -44,7 +44,8 @@ public class RecuperarCon extends AppCompatActivity {
 
     // 11 metodo para el boton de todo lo de PeticionPost
     public void conexionPost(View view){
-        String url = "http://127.0.0.1:8000/api/user/reset-password";
+        String url = "http://192.168.43.139:8000/api/user/reset-password";
+        //String url = R.string.app_url + "user/reset-password";  // para usar en caso de que no tenga bien la url de la api
         PeticionPost peticionPost = new PeticionPost(this);
         peticionPost.execute(url,emailUsuaio);
         Log.d("email","valor del emailUsuario:"+ emailUsuaio);
