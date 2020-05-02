@@ -15,7 +15,7 @@ import okhttp3.MultipartBody;
 
 public class LoginService extends AsyncTask<HashMap<String, String>, Void, JWToken> {
 
-    private String loginRoute = R.string.base_endpoing + "login";
+    private String loginRoute = R.string.app_url + "login";
 
     /**
      * WeakReference<BandsActivity> bandsActivity: Actividad principal en la que se mostrará la
