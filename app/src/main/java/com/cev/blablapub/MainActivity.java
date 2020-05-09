@@ -176,4 +176,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onPointerCaptureChanged(boolean hasCapture) {
         //TODO: hacer lo que sea cuando se cambie el checkbox
     }
+
+    public void prueba(View view) {
+        Intent intent = new Intent(this,Prueba.class);
+        startActivity(intent);
+    }
 }

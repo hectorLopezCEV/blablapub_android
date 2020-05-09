@@ -187,9 +187,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="250dp"
-            android:onClick="inscribirse"
+            android:onClick="prueba"
             android:text="Inscribirse"
-            android:visibility="visible" />
+            android:visibility="visible"
+            />
 
         <Button
             android:id="@+id/registerBack"
@@ -200,5 +201,12 @@
             android:text="Volver"
             android:visibility="visible" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="prueba"
+        android:text="prueba" />
 
 </LinearLayout>
