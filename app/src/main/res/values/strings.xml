@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Blablapub</string>
     <string name="app_url">http://192.168.43.139:8000/api/</string>
-
+    <string-array name="pantallas">
+        <item>Inicio</item>
+        <item >Perfil</item>
+        <item>Ajustes</item>
+    </string-array>
 </resources>

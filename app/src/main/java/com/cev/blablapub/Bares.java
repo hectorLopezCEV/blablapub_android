@@ -23,4 +23,13 @@ public class Bares {
         Bares bares = gson.fromJson(json, Bares.class);
         return  bares;
     }
+
+    public Bares (String nombreBar, String informacionBar, Image imagenBar){
+        this.imagenBar=imagenBar;
+        this.nombreBar=nombreBar;
+        this.informacionBar=informacionBar;
+    }
+
+
+
 }

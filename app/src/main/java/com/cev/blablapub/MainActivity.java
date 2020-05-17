@@ -189,4 +189,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onPointerCaptureChanged(boolean hasCapture) {
         //TODO: hacer lo que sea cuando se cambie el checkbox
     }
+
+    // navigación desde pantalla main a pantalla home, falta poner condiciones antes de pasar de una pantalla a otra (login real)
+    public void loginOnClick(View view){
+
+        this.startActivity(new Intent(this, HomeActivity.class));
+
+    }
 }
