@@ -15,7 +15,7 @@ import okhttp3.MultipartBody;
 
 public class LoginService extends AsyncTask<HashMap<String, String>, Void, JWToken> {
 
-    private String loginRoute = R.string.app_url + "login";
+    private String loginRoute;
 
     /**
      * WeakReference<BandsActivity> bandsActivity: Actividad principal en la que se mostrará la
@@ -29,6 +29,7 @@ public class LoginService extends AsyncTask<HashMap<String, String>, Void, JWTok
      */
     public LoginService(MainActivity mainActivity) {
         this.mainActivity = new WeakReference<>(mainActivity);
+        this.loginRoute = mainActivity.getString(R.string.app_url) + "login";
     }
 
     @Override
