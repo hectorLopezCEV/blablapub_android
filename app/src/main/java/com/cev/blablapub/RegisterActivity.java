@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
         if(todoOK == true){
             PetitionsPost petitionsPost = new PetitionsPost(this);
-            String url = "http://127.0.0.1:8000/api/user";
+            String url = "http://192.168.1.102:8000/api/user";
             String name = nombre.toString()+ apellidos.toString();
             petitionsPost.execute(url,"dd","ff@ff","1234","22","hombre");
 
