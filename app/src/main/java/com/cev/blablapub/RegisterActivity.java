@@ -3,6 +3,7 @@ package com.cev.blablapub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,6 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
     RadioButton mujer;
     CheckBox siHaAceptadoPoliticaUso;
     Button registrarme;
+    EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
         sexo = findViewById(R.id.sexo);
         siHaAceptadoPoliticaUso = findViewById(R.id.aceptarCondiciones);
         registrarme = findViewById(R.id.registrar);
+        password = findViewById(R.id.password);
+        hombre = findViewById(R.id.hombre);
+        mujer = findViewById(R.id.mujer);
     }
     public void inscribirse(View vista) {
         Toast toastKO = Toast.makeText(this, "Faltan datos. Por favor complete la información solicitada",
@@ -56,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
         boolean todoDatosOK = false;
 
         todoDatosOK = (nombre.getText().length() > 0) && (apellidos.getText().length() > 0) && (edad.getText().length() > 0)
-                && //(hombre.isChecked() || mujer.isChecked()) &&
+                && (hombre.isChecked() || mujer.isChecked()) &&
                 ((siHaAceptadoPoliticaUso.isChecked()) ||
                         (siHaAceptadoPoliticaUso.isChecked() == false));
 
@@ -73,12 +78,10 @@ public class RegisterActivity extends AppCompatActivity {
         }
         if(todoOK == true){
             PetitionsPost petitionsPost = new PetitionsPost(this);
-            String url = "http://127.0.0.1:8000/api/user";
-            String name = nombre.toString()+ apellidos.toString();
-            petitionsPost.execute(url,"dd","ff@ff","1234","22","hombre");
-
-
-
+            String url = getString(R.string.app_url)+"user";
+            //String url = "192.168.1.102/api/user";
+            String name = nombre.getText().toString()+" "+ apellidos.getText().toString();
+            petitionsPost.execute(url,name,email.getText().toString(),password.getText().toString(),edad.getText().toString(),hombre.isChecked()?"hombre":"mujer");
         }
 
     }

@@ -119,4 +119,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         this.startActivity(new Intent(this, HomeActivity.class));
 
     }
+
+    public void prueba(View view) {
+        Intent intent = new Intent(this,Prueba.class);
+        startActivity(intent);
+    }
+
+    public void prueba2(View view){
+        Intent intent = new Intent(this,Prueba2.class);
+        startActivity(intent);
+    }
 }
