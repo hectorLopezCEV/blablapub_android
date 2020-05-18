@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F27980"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoListBar"
+            android:layout_width="275dp"
+            android:layout_height="63dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginRight="68dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="bla-bla-pub"
+            android:cropToPadding="false"
+            android:foreground="@drawable/logolyrics"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logolyrics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+         </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/listaBares">
+
+        <EditText
+            android:id="@+id/filterText"
+            android:layout_width="280dp"
+            android:layout_height="match_parent">
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imageFilter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:contentDescription="imagen filtro"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/filtersign"
+            android:visibility="visible"
+            app:srcCompat="@drawable/filtersign"
+            tools:visibility="visible"></ImageView>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listaBares"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:background="#EEFAF2DA"
+        android:dividerHeight="50dp"
+        android:headerDividersEnabled="false"
+        android:paddingTop="20dp"
+        android:scrollbars="vertical" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|fill_vertical"
+        android:background="#F27980"
+        android:onClick="cerrar"
+        android:text="Salir" />
+
+
+</LinearLayout>

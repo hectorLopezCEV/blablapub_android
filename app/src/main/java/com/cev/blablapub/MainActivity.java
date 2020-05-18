@@ -2,8 +2,11 @@ package com.cev.blablapub;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     EditText loginPassword;
     Button loginButton;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         loginEmail = findViewById(R.id.loginEmail);
         loginPassword = findViewById(R.id.loginPassword);
         loginButton = findViewById(R.id.loginButton);
+
+
 
     }
 
