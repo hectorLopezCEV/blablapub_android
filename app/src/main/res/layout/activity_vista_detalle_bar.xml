@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VistaDetalleBar"
-    android:background="#000000">
+    android:background="#090909">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nombreNegocio"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
@@ -23,16 +23,16 @@
         android:id="@+id/imagenDetalle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:onClick="cambiarImagen"
         android:scaleType="centerCrop"
-        android:src="@drawable/interior"
+        android:src="@drawable/rolling"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreNegocio" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/anuncioNegocio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -53,8 +53,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="116dp"
+        android:onClick="cambiarImagen"
         android:text="cambiar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

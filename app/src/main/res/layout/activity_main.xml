@@ -6,14 +6,13 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <TextView
         android:id="@+id/id_rama_javi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="vista de rama javi"
         android:textColor="#CC10EC"
-        android:textSize="40dp"
+        android:textSize="20dp"
         />
 
     <TextView
@@ -208,5 +207,12 @@
         android:layout_height="wrap_content"
         android:onClick="prueba"
         android:text="prueba" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="prueba2"
+        android:onClick="prueba2"/>
 
 </LinearLayout>
