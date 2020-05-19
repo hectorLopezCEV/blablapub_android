@@ -79,7 +79,6 @@ public class RegisterActivity extends AppCompatActivity {
         if(todoOK == true){
             PetitionsPost petitionsPost = new PetitionsPost(this);
             String url = getString(R.string.app_url)+"user";
-            //String url = "192.168.1.102/api/user";
             String name = nombre.getText().toString()+" "+ apellidos.getText().toString();
             petitionsPost.execute(url,name,email.getText().toString(),password.getText().toString(),edad.getText().toString(),hombre.isChecked()?"hombre":"mujer");
         }
