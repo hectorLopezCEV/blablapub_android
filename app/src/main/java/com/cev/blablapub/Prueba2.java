@@ -19,7 +19,7 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
     ListView listView;
-    Elemento[] negocios = new Elemento[5];
+    Elemento[] negocios = new Elemento[4];
     //1 ArrayList<Elemento> bares;
 
     @Override
