@@ -23,40 +23,27 @@ public class VistaDetalleBar extends AppCompatActivity {
         setContentView(R.layout.activity_vista_detalle_bar);
 
 
-
         //2 asociamos las variables a los campos del xml
         imagen = findViewById(R.id.imagenDetalle);  // para mostrar al crearse
         anunNegocio = findViewById(R.id.anuncioNegocio);
         nomNegocio = findViewById(R.id.nombreNegocio);
 
 
-
-
         // recibo del activity prueba el src
         Intent intent = getIntent();
         String texto = intent.getStringExtra("javi");
-        Toast.makeText(this,texto,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
 
         // variable para la imagen que viene de prueba2
-        int imagenList = intent.getIntExtra("imagenList",0);
+        int imagenList = intent.getIntExtra("imagenList", 0);
         String nombreList = intent.getStringExtra("nombreList");
         // compruebo el contenido del inten
-        Log.d("milista","contenido recivido: "+imagenList);
+        Log.d("milista", "contenido recivido: " + imagenList);
+        String nombrePromocion = intent.getStringExtra("nombrePromocion");
         imagen.setImageResource(imagenList);
         nomNegocio.setText(nombreList);
+        anunNegocio.setText(nombrePromocion);
 
-
-
-
-    }
-
-    //3 metodo de prueba para cambiar la imagen
-    public void cambiarImagen(View view)
-    {
-        //4 llenamos la variables con el valor que queremos
-        imagen.setImageResource(R.drawable.conil);
-        nomNegocio.setText("disco javi");
-        anunNegocio.setText("gratis las rayas");
 
     }
 }
