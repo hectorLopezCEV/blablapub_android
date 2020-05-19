@@ -28,13 +28,10 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_prueba2);
 
         // rellenamos el array de los bares/*
-        negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero);
-        negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling);
-        negocios[2]= new Elemento("BAR AVENIDA",R.drawable.brew);
-        negocios[3]= new Elemento("BAR CENTRAL", R.drawable.conil);
-
-
-
+        negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
+        negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
+        negocios[2]= new Elemento("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
+        negocios[3]= new Elemento("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
 
         // asociamos la imagen a nuestro template
         listView = findViewById(R.id.listaImagenes);
@@ -44,18 +41,6 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
         MiAdapter miAdapter = new MiAdapter(this,R.layout.item,negocios);
         // le pasamos a la lista el adapter
         listView.setAdapter(miAdapter);
-
-/*      1
-        bares = new ArrayList<Elemento>();
-        bares.add(new Elemento("BAR OVIDIO",R.drawable.rolling));
-        bares.add(new Elemento("BAR HECTOR",R.drawable.coche));
-        bares.add(new Elemento("BAR GABRIELA",R.drawable.android));
-        bares.add(new Elemento("DISCO CONIL",R.drawable.coche));
-        bares.add(new Elemento("DISCO ALCALA",R.drawable.coche));
-        bares.add(new Elemento("DISCO MOLA",R.drawable.coche));
-        MiAdapter adapter = new MiAdapter(this,R.layout.item,bares);
-        listView.setAdapter(adapter);
-*/
     }
 
     @Override
@@ -64,6 +49,7 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
         Intent intent = new Intent(this,VistaDetalleBar.class);
         intent.putExtra("imagenList",this.negocios[i].imagen);
         intent.putExtra("nombreList",this.negocios[i].texto);
+        intent.putExtra("nombrePromocion",this.negocios[i].promocion.titulo);
         startActivity(intent);
         Log.d("milista","onclik funiona en prueba2"+i);
     }
