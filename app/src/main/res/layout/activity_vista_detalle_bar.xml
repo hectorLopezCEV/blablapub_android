@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VistaDetalleBar"
-    android:background="#090909">
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/nombreNegocio"
@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:text="Pub ejemplo app"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
