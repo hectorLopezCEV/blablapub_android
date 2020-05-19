@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Prueba2">
+    tools:context=".Prueba2"
+    android:background="@color/colorPrimary">
 
     <ListView
         android:id="@+id/listaImagenes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
