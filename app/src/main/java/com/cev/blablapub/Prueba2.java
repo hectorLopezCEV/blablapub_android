@@ -28,11 +28,12 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_prueba2);
 
         // rellenamos el array de los bares/*
-        negocios[0]= new Elemento("BAR JAVI",R.drawable.conil);
-        negocios[1]= new Elemento("BAR GABRIELA",R.drawable.rolling);
-        negocios[2]= new Elemento("BAR HECTOR",R.drawable.android);
-        negocios[3]= new Elemento("BAR BILAL", R.drawable.coche);
-        negocios[4]= new Elemento("BAR OVIDIO", R.drawable.coche);
+        negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero);
+        negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling);
+        negocios[2]= new Elemento("BAR AVENIDA",R.drawable.brew);
+        negocios[3]= new Elemento("BAR CENTRAL", R.drawable.conil);
+
+
 
 
         // asociamos la imagen a nuestro template
@@ -61,7 +62,8 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
         Intent intent = new Intent(this,VistaDetalleBar.class);
-        intent.putExtra("imagenList",i);
+        intent.putExtra("imagenList",this.negocios[i].imagen);
+        intent.putExtra("nombreList",this.negocios[i].texto);
         startActivity(intent);
         Log.d("milista","onclik funiona en prueba2"+i);
     }

@@ -39,9 +39,11 @@ public class VistaDetalleBar extends AppCompatActivity {
 
         // variable para la imagen que viene de prueba2
         int imagenList = intent.getIntExtra("imagenList",0);
+        String nombreList = intent.getStringExtra("nombreList");
         // compruebo el contenido del inten
         Log.d("milista","contenido recivido: "+imagenList);
-        //imagen.setImageResource(imagenList);
+        imagen.setImageResource(imagenList);
+        nomNegocio.setText(nombreList);
 
 
 

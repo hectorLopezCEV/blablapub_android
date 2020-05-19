@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     // navigación desde pantalla main a pantalla home, falta poner condiciones antes de pasar de una pantalla a otra (login real)
     public void loginOnClick(View view){
 
-        this.startActivity(new Intent(this, HomeActivity.class));
+        this.startActivity(new Intent(this, Prueba2.class));
 
     }
 

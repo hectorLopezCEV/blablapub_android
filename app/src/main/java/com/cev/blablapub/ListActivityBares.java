@@ -14,9 +14,8 @@ import android.widget.ListAdapter;
 import android.content.SharedPreferences;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ListActivity extends AppCompatActivity {
+public class ListActivityBares extends AppCompatActivity {
 
     ListView lista;
     ArrayList<Bares> listaBar;
@@ -51,7 +50,7 @@ public class ListActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                (ListActivity.this).filterAdapter.getFilter().filter(charSequence);
+                (ListActivityBares.this).filterAdapter.getFilter().filter(charSequence);
             }
 
             @Override
@@ -63,8 +62,7 @@ public class ListActivity extends AppCompatActivity {
         // FIXME: Hace falta solucionar esta accion que pide la lista de la vista donde no existe el ID en el layout ni el adapter correcto
         //Mostramos la lista
         lista = findViewById(R.id.listaBares);
-
-        ListAdapter adapter = new ListAdapter(this, R.layout.activity_detalle_bar, listaBares);
+        ListAdapter adapter = new ListAdapterBares(this, R.layout.activity_detalle_bar, listaBares.listaBar);
         lista.setAdapter(adapter);
 
 

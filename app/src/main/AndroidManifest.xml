@@ -24,7 +24,7 @@
         <activity android:name=".Prueba" />
         <activity android:name=".VistaDetalleBar" />
         <activity android:name=".RecuperarCon" />
-        <activity android:name=".ListActivity" />
+        <activity android:name=".ListActivityBares" />
         <activity android:name=".HomeActivity"></activity>
     </application>
 

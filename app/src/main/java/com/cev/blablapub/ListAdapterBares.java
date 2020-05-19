@@ -12,13 +12,13 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class ListAdapter extends ArrayAdapter {
+public class ListAdapterBares extends ArrayAdapter {
 
     Context context;
     int itemLayout;
     ArrayList<Bares> datos;
 
-    public ListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Bares> objects) {
+    public ListAdapterBares(@NonNull Context context, int resource, @NonNull ArrayList<Bares> objects) {
         super(context, resource, objects);
 
         this.context = context;

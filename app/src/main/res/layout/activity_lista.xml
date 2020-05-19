@@ -7,7 +7,7 @@
     android:background="#F27980"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ListActivity">
+    tools:context=".ListActivityBares">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
