@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     Oculta la presentación y visualiza los campos de entrada de datos
      */
     public void abrirRegistro(View vista) {
-        login.setVisibility(View.GONE);
-        registro.setVisibility(View.GONE);
+        //login.setVisibility(View.GONE);
+        //registro.setVisibility(View.GONE);
 
         Intent intent = new Intent(this,RegisterActivity.class);
         intent.putExtra(EXTRA_MESSAGE, "message");
