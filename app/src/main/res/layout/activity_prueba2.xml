@@ -11,7 +11,9 @@
         android:id="@+id/listaImagenes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        />
+        android:background="#EEFAF2DA"
+        android:headerDividersEnabled="false"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
