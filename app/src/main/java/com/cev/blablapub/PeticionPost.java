@@ -50,7 +50,7 @@ public class PeticionPost extends AsyncTask <String, Void, String> {
     @Override  /// 7 cogo el resultado y lo muestro con un Toast
     protected void onPostExecute(String resultado) {
     // 9 mostramos el resultado con el Toast
-        Toast.makeText(context,"el resultado del activity peticion es:"+ resultado,Toast.LENGTH_LONG).show();
+        Toast.makeText(context,"Revisa tu email"+resultado,Toast.LENGTH_LONG).show();
         Log.d("email","el resultado de peticion es: "+resultado);
     }
     // 10 lo llamo todo desde RecuperarCon con un metodo en el boton

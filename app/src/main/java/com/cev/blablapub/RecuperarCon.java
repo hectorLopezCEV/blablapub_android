@@ -30,25 +30,15 @@ public class RecuperarCon extends AppCompatActivity {
 
 
     }
-    /*
-    // funcion para conectarme a internet y guradar el email
-    public void conexionGet(View view){
-        String url = "http://127.0.0.1:8000/api/user/reset-password"; //http://www.mocky.io/v2/5ea1c2d9310000be4c1eedd8
-        GetAsincro getAsincro = new GetAsincro(this); // creamos instancia de nuestra peticion
-        getAsincro.execute(url); // ejecutamos la peticion url
 
-        // cojemos el email del usuario para mostrarlo
-        emailUsuaio= editText.getText().toString();
-        Toast.makeText(this,"su email es:" + emailUsuaio,Toast.LENGTH_LONG).show();
-    }*/
 
     // 11 metodo para el boton de todo lo de PeticionPost
     public void conexionPost(View view){
         String url = "http://192.168.43.139:8000/api/user/reset-password";
-        //String url = R.string.app_url + "user/reset-password";  // para usar en caso de que no tenga bien la url de la api
+
         PeticionPost peticionPost = new PeticionPost(this);
         peticionPost.execute(url,emailUsuaio);
-        Log.d("email","valor del emailUsuario:"+ emailUsuaio);
+
     }
 
 }

@@ -1,12 +1,16 @@
 package com.cev.blablapub;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +25,10 @@ public class VistaDetalleBar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_detalle_bar);
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+        }
 
 
         //2 asociamos las variables a los campos del xml
@@ -42,6 +50,7 @@ public class VistaDetalleBar extends AppCompatActivity {
         imagen.setImageResource(imagenList);
         nomNegocio.setText(nombreList);
         anunNegocio.setText(nombrePromocion);
+
 
 
     }

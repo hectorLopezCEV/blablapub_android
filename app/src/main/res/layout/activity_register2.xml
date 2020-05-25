@@ -7,23 +7,6 @@
     android:background="#F27980"
     tools:context=".RegisterActivity">
 
-    <ImageView
-        android:id="@+id/imagenApp2"
-        android:layout_width="80dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:layout_marginBottom="21dp"
-        android:background="#F27980"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
@@ -143,15 +126,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenApp2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/registrar"
@@ -172,6 +156,8 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aceptarCondiciones" />
+        app:layout_constraintTop_toBottomOf="@+id/aceptarCondiciones"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
