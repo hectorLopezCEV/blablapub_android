@@ -32,13 +32,12 @@ public class VistaDetalleBar extends AppCompatActivity {
         // recibo del activity prueba el src
         Intent intent = getIntent();
         String texto = intent.getStringExtra("javi");
-        Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
 
         // variable para la imagen que viene de prueba2
         int imagenList = intent.getIntExtra("imagenList", 0);
         String nombreList = intent.getStringExtra("nombreList");
         // compruebo el contenido del inten
-        Log.d("milista", "contenido recivido: " + imagenList);
         String nombrePromocion = intent.getStringExtra("nombrePromocion");
         imagen.setImageResource(imagenList);
         nomNegocio.setText(nombreList);

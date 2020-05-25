@@ -51,7 +51,6 @@ public class Prueba2 extends AppCompatActivity implements AdapterView.OnItemClic
         intent.putExtra("nombreList",this.negocios[i].texto);
         intent.putExtra("nombrePromocion",this.negocios[i].promocion.titulo);
         startActivity(intent);
-        Log.d("milista","onclik funiona en prueba2"+i);
     }
 
 
