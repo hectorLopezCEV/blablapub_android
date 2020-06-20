@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">Blablapub</string>
+    <string name="app_name" translatable="false">Blablapub</string>
     <string name="app_url">https://blablapub.tk/api/</string>
     <string-array name="pantallas">
         <item>Inicio</item>
         <item >Perfil</item>
         <item>Ajustes</item>
     </string-array>
+    <string name="lOGIN">LOGIN</string>
+    <string name="REGISTRO">REGISTRO</string>
 </resources>
