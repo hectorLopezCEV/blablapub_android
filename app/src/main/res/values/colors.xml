@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F27980</color>
+    <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#F6EFBF</color>
+    <color name="base">#F27980</color>
+
+    <color name="tonoa">#B3595E</color>
+    <color name="tonob">#73393C</color>
+    <color name="tonod">#FF8086</color>
+
+    <color name="analogoA">#F99670</color>
+    <color name="analogoB">#DB7363</color>
+    <color name="analogoD">#DB63A5</color>
+    <color name="analogoE">#F670F9</color>
+
+
+    <color name="acen">#F6EFBF</color>
+    <color name="negroA">#1E0000</color>
+    <color name="negroB">#381111</color>
+    <color name="negtoC">#1E0000</color>
+
+    <color name="btnTrans">#C4020202</color>
+
+
+
 </resources>
