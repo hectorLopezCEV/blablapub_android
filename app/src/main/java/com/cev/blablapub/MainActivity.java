@@ -56,7 +56,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
     }
-
+    /*
+    metodo llamado al hacer click en el login
+     */
+    // todo preguntar a Hector si esto esta funcional o creamos un activity nuevo
     public void abrirLogin(View vista) {
         login.setVisibility(View.GONE);
         registro.setVisibility(View.GONE);
