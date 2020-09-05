@@ -9,17 +9,7 @@
     android:background="#F27980"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/loguitoApp"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/logolyrics"
-        />
+  
 
     <ImageView
         android:id="@+id/imagenApp"
