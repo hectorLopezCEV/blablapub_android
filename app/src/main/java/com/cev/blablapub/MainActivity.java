@@ -2,19 +2,11 @@ package com.cev.blablapub;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
-import android.widget.RadioButton;
 import android.widget.LinearLayout;
 import android.widget.CompoundButton;
 
@@ -42,40 +34,44 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Se establecen las propiedades de este objeto
-        login = findViewById(R.id.login);
-        registro = findViewById(R.id.registro);
-        recovery = findViewById(R.id.recovery);
-        imagenTarta = findViewById(R.id.imagenApp);
+        Log.i("bla","/////////////////MainActivity");
 
-        vistaLogin = findViewById(R.id.vistaLogin);
-        loginEmail = findViewById(R.id.loginEmail);
-        loginPassword = findViewById(R.id.loginPassword);
+        // Se establecen las propiedades de este objeto
+        login = findViewById(R.id.btn_login);
+        registro = findViewById(R.id.btn_registro);
+        recovery = findViewById(R.id.recovery);
+        imagenTarta = findViewById(R.id.img_copa);
+
+        //vistaLogin = findViewById(R.id.vistaLogin);
+        loginEmail = findViewById(R.id.edt_mail);
+        loginPassword = findViewById(R.id.edt_password);
         loginButton = findViewById(R.id.loginButton);
 
 
 
     }
+
+
+    // metodo para ir al Activity Login
+
+    public void irLogin(View v){
+        Intent intent = new Intent(this,LoginActivity.class);
+        startActivity(intent);
+    }
+
+
     /*
-    metodo llamado al hacer click en el login
-     */
-    // todo preguntar a Hector si esto esta funcional o creamos un activity nuevo
-    public void abrirLogin(View vista) {
-        login.setVisibility(View.GONE);
-        registro.setVisibility(View.GONE);
+   Oculta la presentación y visualiza los campos de entrada de datos
+    */
+    public void abrirRegistro(View vista) {
 
-        vistaLogin.setVisibility(View.VISIBLE);
-
-        loginEmail.setText("");
-        loginPassword.setText("");
+        Intent intent = new Intent(this,RegisterActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, "message");
+        startActivity(intent);
     }
 
-    public void backToMain(View vista) {
-        login.setVisibility(View.VISIBLE);
-        registro.setVisibility(View.VISIBLE);
 
-        vistaLogin.setVisibility(View.GONE);
-    }
+
 
     public void login(View view) {
         HashMap<String, String> parameters = new HashMap<>();
@@ -88,23 +84,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         loginService.execute(parameters);
     }
 
-    /*
-    Oculta la presentación y visualiza los campos de entrada de datos
-     */
-    public void abrirRegistro(View vista) {
-        //login.setVisibility(View.GONE);
-        //registro.setVisibility(View.GONE);
-
-        Intent intent = new Intent(this,RegisterActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, "message");
-        startActivity(intent);
-    }
-
-    // metodo para navegar al Activiti recuperar contraseña
-    public void recuperarCon (View view){
-        Intent intent = new Intent(this,RecuperarCon.class);
-        startActivity(intent);
-    }
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -116,17 +95,5 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         //TODO: hacer lo que sea cuando se cambie el checkbox
     }
 
-    // navigación desde pantalla main a pantalla home, falta poner condiciones antes de pasar de una pantalla a otra (login real)
-    public void loginOnClick(View view){
 
-        this.startActivity(new Intent(this, Prueba2.class));
-
-    }
-
-
-
-    public void prueba2(View view){
-        Intent intent = new Intent(this,Prueba2.class);
-        startActivity(intent);
-    }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.content.Intent;
 import android.widget.ArrayAdapter;
@@ -30,6 +31,7 @@ public class ListActivityBares extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("bla","clase LisActivityBares");
 
         //Recuperamos el valor pasado a la actividad
         Intent intent = getIntent();

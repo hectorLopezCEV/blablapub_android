@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity" android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecuperarCon"></activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".Prueba2"></activity>
-        <activity android:name=".VistaDetalleBar" />
         <activity android:name=".RecuperarCon" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Prueba2" />
+        <activity android:name=".VistaDetalleBar" />
         <activity android:name=".ListActivityBares" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>

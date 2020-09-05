@@ -13,7 +13,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
-        android:text="Introduce tu email  para recuperar tu contraseña"
+        android:text="@string/introduce_tu_email_para_recuperar_tu_contrase_a"
         android:textColor="#FAF9E6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -22,13 +22,13 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Email"
-        android:textColorHint="#F6F3E2"
+        android:hint="@string/email"
         android:inputType="textPersonName"
+        android:textColorHint="#F6F3E2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,19 +36,16 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="Aceptar"
-        android:textColor="#FAF9E6"
         android:background="@drawable/ovalo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.039"
-        android:onClick="conexionPost"/>
+        android:onClick="conexionPost"
+        android:text="@string/aceptar"
+        android:textColor="#FAF9E6"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 
     <ImageView

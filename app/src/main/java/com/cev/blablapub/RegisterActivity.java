@@ -3,7 +3,6 @@ package com.cev.blablapub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -34,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         edad = findViewById(R.id.edad);
         sexo = findViewById(R.id.sexo);
         siHaAceptadoPoliticaUso = findViewById(R.id.aceptarCondiciones);
-        registrarme = findViewById(R.id.registrar);
+        registrarme = findViewById(R.id.btn_registro);
         password = findViewById(R.id.password);
         hombre = findViewById(R.id.hombre);
         mujer = findViewById(R.id.mujer);
@@ -84,4 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
     }
+
+    // todo realizar un layout en horizontal para esta pantalla
+
 }

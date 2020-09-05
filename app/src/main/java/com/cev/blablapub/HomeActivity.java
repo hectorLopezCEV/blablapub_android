@@ -2,6 +2,7 @@ package com.cev.blablapub;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,6 +29,8 @@ public class HomeActivity extends AppCompatActivity  implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        Log.i("blabla","/////////estoy en el HOMEACTIVITY");
 
         drawerLayout = findViewById(R.id.home_layout);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.app_name, R.string.app_name);
