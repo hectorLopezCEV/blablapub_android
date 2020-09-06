@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    android:id="@+id/home_layout"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <FrameLayout
-        android:id="@+id/contenido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    android:layout_height="match_parent"
+    tools:context=".Home">
 
     <ListView
-        android:id="@+id/navView"
+        android:id="@+id/lisv_listaImagenes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="#BF5A6C"
-        android:entries="@array/pantallas"
+        android:background="#EEFAF2DA"
+        android:headerDividersEnabled="false"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
-
-
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,6 @@ public class FragmentPerfil extends Fragment {
         return view;
     }
 
+    // todo realizar un layout en horizontal para el fragment
+
 }

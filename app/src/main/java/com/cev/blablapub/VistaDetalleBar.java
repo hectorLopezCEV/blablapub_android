@@ -25,6 +25,7 @@ public class VistaDetalleBar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_detalle_bar);
+        Log.i("bla","/////VISTADETALLE_oncreate");
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));

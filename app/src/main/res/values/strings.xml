@@ -8,7 +8,7 @@
     </string-array>
     <string name="lOGIN">LOGIN</string>
     <string name="REGISTRO">REGISTRO</string>
-    <string name="introduce_tu_email_para_recuperar_tu_contrase_a">Introduce tu email para recuperar tu contraseña</string>
+    <string name="introduce_tu_email_para_recuperar_tu_contrase_a">Por favor introduce tu email, te enviaremos un correo</string>
     <string name="email">Email</string>
     <string name="aceptar">Aceptar</string>
 </resources>

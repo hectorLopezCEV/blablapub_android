@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         login = findViewById(R.id.btn_login);
         registro = findViewById(R.id.btn_registro);
         recovery = findViewById(R.id.recovery);
-        imagenTarta = findViewById(R.id.img_copa);
+        imagenTarta = findViewById(R.id.img_copa_recuperar_con);
 
         //vistaLogin = findViewById(R.id.vistaLogin);
         loginEmail = findViewById(R.id.edt_mail);
@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onPointerCaptureChanged(boolean hasCapture) {
         //TODO: hacer lo que sea cuando se cambie el checkbox
     }
+
+    // TODO hay que conseguir un tamaño de la copa para cada dispositivo
 
 
 }

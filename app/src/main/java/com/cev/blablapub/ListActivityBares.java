@@ -31,7 +31,7 @@ public class ListActivityBares extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("bla","clase LisActivityBares");
+        Log.i("bla","///LisActivityBares_ONCREATE");
 
         //Recuperamos el valor pasado a la actividad
         Intent intent = getIntent();

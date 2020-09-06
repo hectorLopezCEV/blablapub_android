@@ -2,7 +2,9 @@ package com.cev.blablapub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -19,6 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     RadioGroup sexo;
     RadioButton hombre;
     RadioButton mujer;
+    RadioButton na;
     CheckBox siHaAceptadoPoliticaUso;
     Button registrarme;
     EditText password;
@@ -27,7 +30,9 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register2);
-        email = findViewById(R.id.email);
+        Log.i("bla","/////////////REGISTERACTIVITY_oncreate");
+
+        email = findViewById(R.id.txv_email_recu_con);
         nombre = findViewById(R.id.nombre);
         apellidos = findViewById(R.id.apellido);
         edad = findViewById(R.id.edad);
@@ -37,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         hombre = findViewById(R.id.hombre);
         mujer = findViewById(R.id.mujer);
+        na = findViewById(R.id.na);
     }
     public void inscribirse(View vista) {
         Toast toastKO = Toast.makeText(this, "Faltan datos. Por favor complete la información solicitada",
@@ -58,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         boolean todoOK = false;
         boolean todoDatosOK = false;
-
+        // todo revisar esta logica porque sale un Toast que no deveria de salir
         todoDatosOK = (nombre.getText().length() > 0) && (apellidos.getText().length() > 0) && (edad.getText().length() > 0)
                 && (hombre.isChecked() || mujer.isChecked()) &&
                 ((siHaAceptadoPoliticaUso.isChecked()) ||
@@ -75,11 +81,20 @@ public class RegisterActivity extends AppCompatActivity {
         if (todoDatosOK && !edadOK) {
             toastMenorEdad.show();
         }
-        if(todoOK == true){
+
+        //
+        if(todoOK){
             PetitionsPost petitionsPost = new PetitionsPost(this);
             String url = getString(R.string.app_url)+"user";
             String name = nombre.getText().toString()+" "+ apellidos.getText().toString();
             petitionsPost.execute(url,name,email.getText().toString(),password.getText().toString(),edad.getText().toString(),hombre.isChecked()?"hombre":"mujer");
+
+            // navegamos a la pantalla de login
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
+        }else{
+            toastKO.show();
+            Log.i("bla","////no entra en el if y no navegamos a login");
         }
 
     }

@@ -2,6 +2,8 @@ package com.cev.blablapub;
 
 import java.util.ArrayList;
 
+// creo que se puede eliminar esta clase, eperaremos un podo
+
 public class Elemento {
     public String texto;
     public int imagen;

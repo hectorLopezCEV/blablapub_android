@@ -19,12 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecuperarCon" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".Prueba2" />
-        <activity android:name=".VistaDetalleBar" />
+        <activity android:name=".RecuperarCon" android:parentActivityName=".LoginActivity" />
+        <activity android:name=".RegisterActivity" android:parentActivityName=".LoginActivity"/>
+        <activity android:name=".Home" />
+        <activity android:name=".VistaDetalleBar" android:parentActivityName=".Home" />
         <activity android:name=".ListActivityBares" />
-        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>

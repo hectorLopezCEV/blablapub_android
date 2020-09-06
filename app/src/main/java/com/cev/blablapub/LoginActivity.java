@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -29,12 +29,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Log.i("bla","////////LOGIN_oncreate");
 
         // Se establecen las propiedades de este objeto
         login = findViewById(R.id.btn_login);
         registro = findViewById(R.id.btn_registro);
         recovery = findViewById(R.id.recovery);
-        imagenTarta = findViewById(R.id.img_copa);
+        imagenTarta = findViewById(R.id.img_copa_recuperar_con);
 
 
         loginEmail = findViewById(R.id.edt_mail);
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     // navigación desde pantalla main a pantalla home, falta poner condiciones antes de pasar de una pantalla a otra (login real)
     public void loginOnClick(View view){
 
-        this.startActivity(new Intent(this, Prueba2.class));
+        this.startActivity(new Intent(this, Home.class));
 
     }
 

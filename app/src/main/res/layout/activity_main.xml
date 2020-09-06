@@ -11,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/img_copa"
+        android:id="@+id/img_copa_recuperar_con"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="90dp"

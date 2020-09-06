@@ -9,33 +9,37 @@
 
 
     <TextView
-        android:id="@+id/anunciado"
-        android:layout_width="250dp"
+        android:id="@+id/txv_anunciado"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="95dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:text="@string/introduce_tu_email_para_recuperar_tu_contrase_a"
         android:textColor="#FAF9E6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/img_copa_recuperar_con" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="251dp"
-        android:layout_height="37dp"
+        android:id="@+id/txv_email_recu_con"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
         android:textColorHint="#F6F3E2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txv_anunciado"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anunciado" />
+        app:layout_constraintStart_toStartOf="@+id/txv_anunciado"
+        app:layout_constraintTop_toBottomOf="@+id/txv_anunciado" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_button_recu_con"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -43,13 +47,14 @@
         android:onClick="conexionPost"
         android:text="@string/aceptar"
         android:textColor="#FAF9E6"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintEnd_toEndOf="@+id/txv_email_recu_con"
+        app:layout_constraintStart_toStartOf="@+id/txv_email_recu_con"
+        app:layout_constraintTop_toBottomOf="@+id/txv_email_recu_con" />
 
-
+    <!-- LA IMAGEN DE LA COPA NO CRECE, INTENTAR CONSEGUIR
+     UN TAMAÑO PARA DISPOSITIVO-->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_copa_recuperar_con"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="76dp"

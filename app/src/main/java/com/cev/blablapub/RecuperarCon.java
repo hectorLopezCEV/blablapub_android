@@ -1,17 +1,11 @@
 package com.cev.blablapub;
 
 import androidx.appcompat.app.AppCompatActivity;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import java.io.IOException;
 
 public class RecuperarCon extends AppCompatActivity {
     // conexion de las variables del html
@@ -23,9 +17,10 @@ public class RecuperarCon extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recuperar_con);
+        Log.i("bla","//////RECUPERARCON_oncreate");
 
         // conexion de la variables con html
-        editText= findViewById(R.id.email);
+        editText= findViewById(R.id.txv_email_recu_con);
         emailUsuaio= editText.getText().toString();
 
 
