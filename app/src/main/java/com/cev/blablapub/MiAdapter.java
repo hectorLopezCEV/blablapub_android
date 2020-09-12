@@ -40,7 +40,7 @@ public class MiAdapter extends ArrayAdapter {
             convertView = layoutInflater.inflate(intemLayout, parent, false);
         }
         // ahora que tenemos la vista solo nos queda rellenarla con nuestra vista y nuestro array cogemos el texto y lo rellenamos
-        TextView textView = convertView.findViewById(R.id.textItem);
+        TextView textView = convertView.findViewById(R.id.txv_nombre_establecimiento);
         textView.setText(datos[position].texto);
 
         // hacemos lo mismo con la vista la busdcamos en nuestro layout y le pasamos nuestra imagen

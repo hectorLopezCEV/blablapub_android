@@ -110,6 +110,7 @@
         android:hint="Nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,8 +126,10 @@
         android:text="registro"
         android:textColor="#FAF9E6"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aceptarCondiciones"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/aceptarCondiciones"
-        app:layout_constraintTop_toBottomOf="@+id/aceptarCondiciones" />
+        app:layout_constraintTop_toBottomOf="@+id/aceptarCondiciones"
+        app:layout_constraintVertical_bias="0.009" />
 </androidx.constraintlayout.widget.ConstraintLayout>

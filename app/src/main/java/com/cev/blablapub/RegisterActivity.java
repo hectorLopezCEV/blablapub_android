@@ -1,6 +1,7 @@
 package com.cev.blablapub;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,6 +32,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register2);
         Log.i("bla","/////////////REGISTERACTIVITY_oncreate");
+
+
 
         email = findViewById(R.id.txv_email_recu_con);
         nombre = findViewById(R.id.nombre);

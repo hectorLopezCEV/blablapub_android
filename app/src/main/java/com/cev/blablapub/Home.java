@@ -1,11 +1,18 @@
 package com.cev.blablapub;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.icu.text.CaseMap;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -16,12 +23,25 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
     Elemento[] negocios = new Elemento[4];
     //1 ArrayList<Elemento> bares;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.i("bla","//////HOME_oncreate");
 
+        /*
+        logica para nuestro toolbar, le metemos un if como capa de seguridad
+         */
+        Toolbar toolbar = findViewById(R.id.mitoolbar);
+        if (toolbar!=null){
+            toolbar.setTitle(R.string.app_name);
+            toolbar.setTitleTextColor(getResources().getColor(R.color.base));
+            toolbar.setBackgroundColor(getResources().getColor(R.color.blanco));
+        }
+
+       // getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FDFCFC")));
+        
         // rellenamos el array de los bares/*
         negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
         negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));

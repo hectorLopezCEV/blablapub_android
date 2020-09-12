@@ -1,7 +1,11 @@
 package com.cev.blablapub;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,9 +14,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.CompoundButton;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.HashMap;
+
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener  {
     public static final String EXTRA_MESSAGE = "com.cev.blablapub.RegisterActivity.MESSAGE";
@@ -29,12 +37,24 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
 
+    @SuppressLint("ResourceAsColor")
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Log.i("bla","/////////////////MainActivity");
+
+        /*
+        logica de la Toolbar
+        declaramos la Toolbar que hemos creado para manejarla en cada Activity
+        la metemos dentro de un if para añadir una pequeña capa de seguridad
+         */
+
+        Toolbar toolbar = findViewById(R.id.mitoolbar);
+        if (toolbar!=null){
+            toolbar.setTitle(R.string.app_name);
+        }
 
         // Se establecen las propiedades de este objeto
         login = findViewById(R.id.btn_login);
@@ -50,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
     }
+
+
 
 
     // metodo para ir al Activity Login

@@ -1,6 +1,7 @@
 package com.cev.blablapub;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.i("bla","////////LOGIN_oncreate");
+
+        /*
+        logica de la Toolbar
+        declaramos la Toolbar que hemos creado para manejarla en cada Activity
+        la metemos dentro de un if para añadir una pequeña capa de seguridad
+         */
+        Toolbar toolbar = findViewById(R.id.mitoolbar);
+        if (toolbar!=null){
+            toolbar.setTitle(R.string.app_name);
+        }
 
         // Se establecen las propiedades de este objeto
         login = findViewById(R.id.btn_login);

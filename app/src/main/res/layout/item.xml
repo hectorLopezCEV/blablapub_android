@@ -1,36 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/colorPrimary"
-    android:textSize="30dp"
+    android:background="@color/blanco"
     >
 
     <ImageView
         android:id="@+id/imageItem"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="296dp"
+        android:layout_marginTop="5dp"
         android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/rolling" />
 
-    <TextView
-        android:id="@+id/textItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="disco rolling"
-        android:textColor="#6719F3"
-        android:textSize="20dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toEndOf="@+id/imageItem"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/txv_nombre_establecimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:fontFamily="sans-serif-medium"
+            android:text="disco rolling"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#050505"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txv_seguir"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            android:text="@string/seguir"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/base"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_iconos"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageItem" >
+
+        <ImageView
+            android:id="@+id/img_corazon"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/corazon_foreground"
+            android:layout_gravity="start"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+
+    <!-- mano y comentario -->
+    <LinearLayout
+        android:id="@+id/layout_mano_y_comentarios"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_iconos">
+
+        <!-- mano -->
+        <LinearLayout
+            android:id="@+id/lyt_mano"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_mano"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:foregroundGravity="left"
+                app:srcCompat="@drawable/mano_ok_foreground"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/txt_mano"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:text="@string/me_gusta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="@dimen/dp_15" />
+        </LinearLayout>
+
+
+            <!-- comentarios -->
+            <LinearLayout
+                android:id="@+id/lyt_comentarios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/comentarios_foreground"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txv_coment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="Comentarios"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="@dimen/dp_15" />
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

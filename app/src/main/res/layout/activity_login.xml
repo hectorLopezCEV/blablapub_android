@@ -4,12 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@color/base">
+    android:background="@color/base"
+    tools:context=".LoginActivity">
+
+    <include
+        android:id="@+id/mitoolbar"
+        layout="@layout/toolbar" />
 
     <!-- EL TAMAÑO DE LA IMAGEN PUEDE AFECTAR A OTROS DISPOSITIVOS
     DONDE EL WRAP_CONTENT SEA MAS GRANDE O PEQUEÑO INTENTAR SACAR
     LA IMAGEN EN VARIOS TAMAÑOS PARA CADA DISPOSITIVO -->
+
 
     <ImageView
         android:id="@+id/img_blabla"
@@ -17,14 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mitoolbar"
         app:srcCompat="@drawable/logolyrics" />
-
 
     <EditText
         android:id="@+id/edt_mail"

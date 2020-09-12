@@ -11,4 +11,6 @@
     <string name="introduce_tu_email_para_recuperar_tu_contrase_a">Por favor introduce tu email, te enviaremos un correo</string>
     <string name="email">Email</string>
     <string name="aceptar">Aceptar</string>
+    <string name="seguir">.Seguir</string>
+    <string name="me_gusta">Me gusta</string>
 </resources>
