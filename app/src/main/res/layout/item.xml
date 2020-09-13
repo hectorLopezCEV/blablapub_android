@@ -101,7 +101,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:foregroundGravity="left"
+                android:foregroundGravity="right"
                 app:srcCompat="@drawable/mano_ok_foreground"
                 tools:ignore="VectorDrawableCompat" />
 
