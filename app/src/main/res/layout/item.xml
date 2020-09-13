@@ -69,6 +69,7 @@
         <ImageView
             android:id="@+id/img_corazon"
             android:layout_width="@dimen/dp_30"
+            android:padding="@dimen/dp_0"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/corazon_foreground"
             android:layout_gravity="start"
@@ -94,14 +95,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/img_mano"
-                android:layout_width="60dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:foregroundGravity="right"
                 app:srcCompat="@drawable/mano_ok_foreground"
                 tools:ignore="VectorDrawableCompat" />
 
@@ -128,7 +128,7 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="60dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/comentarios_foreground"
                     tools:ignore="VectorDrawableCompat" />
