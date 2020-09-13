@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -22,6 +24,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
     ListView listView;
     Elemento[] negocios = new Elemento[4];
     //1 ArrayList<Elemento> bares;
+    Menu menu;
 
 
     @Override
@@ -40,8 +43,9 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
             toolbar.setBackgroundColor(getResources().getColor(R.color.blanco));
         }
 
-       // getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FDFCFC")));
-        
+
+
+
         // rellenamos el array de los bares/*
         negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
         negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
@@ -68,7 +72,18 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         startActivity(intent);
     }
 
+    /*
+    metodo para inflar nuestro menu
+     */
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main,menu);
+
+        // devolvemos un boolean para que siempre se muestre
+        return super.onCreateOptionsMenu(menu);
+    }
 
 
 }
