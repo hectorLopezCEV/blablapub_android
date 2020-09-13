@@ -13,5 +13,11 @@
     <string name="aceptar">Aceptar</string>
     <string name="seguir">.Seguir</string>
     <string name="me_gusta">Me gusta</string>
+<<<<<<< HEAD
     <string name="buscar">Buscar</string>
+=======
+    <string name="comentar">Comentar</string>
+    <string name="perfil">Perfil</string>
+    <string name="lupa">Buscar</string>
+>>>>>>> javi_final
 </resources>
