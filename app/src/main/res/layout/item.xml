@@ -95,7 +95,6 @@
             android:layout_height="match_parent"
             android:layout_weight="100"
             android:gravity="center"
-            android:padding="@dimen/dp_10"
             android:layout_marginLeft="@dimen/dp_10"
             android:orientation="horizontal">
 
@@ -109,9 +108,10 @@
             <TextView
                 android:id="@+id/txt_mano"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:fontFamily="sans-serif"
-                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:text="@string/me_gusta"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/secondary_text_dark"
@@ -132,17 +132,16 @@
                     android:id="@+id/imageView"
                     android:layout_width="@dimen/dp_30"
                     android:layout_height="@dimen/dp_30"
-                    android:layout_gravity=""
                     app:srcCompat="@drawable/outline_textsms_24"
                     tools:ignore="VectorDrawableCompat" />
 
                 <TextView
                     android:id="@+id/txv_coment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:layout_margin="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:text="@string/comentar"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/secondary_text_dark"
@@ -170,10 +169,10 @@
             <TextView
                 android:id="@+id/txv_mucica"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:text="Disco"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/secondary_text_dark"
