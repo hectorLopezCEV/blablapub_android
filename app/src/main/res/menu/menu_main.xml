@@ -13,9 +13,11 @@
         android:title="@string/lupa"
         />
 
+    <!--
     <item android:id="@+id/perfil"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_action_name"
         android:title="@string/perfil"/>
+        -->
 
 </menu>
