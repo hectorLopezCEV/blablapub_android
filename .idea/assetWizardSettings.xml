@@ -25,7 +25,6 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="opacityPercent" value="60" />
-                                                <entry key="paddingPercent" value="-5" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -36,7 +35,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_thumb_up_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_more_vert_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -46,7 +45,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="mano_ok" />
+                                      <entry key="outputName" value="menu_icono" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
@@ -99,6 +98,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -108,10 +108,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="foregroundAssetType" value="CLIP_ART" />
-                                      <entry key="generateLegacyIcon" value="false" />
-                                      <entry key="legacyIconShape" value="NONE" />
-                                      <entry key="outputName" value="mano_ok" />
+                                      <entry key="foregroundImage" value="C:\Users\jakiv\Desktop\iconos_android\comentario\res\drawable-hdpi\outline_textsms_black_18.png" />
+                                      <entry key="outputName" value="comentario_susp" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -190,6 +190,11 @@
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>

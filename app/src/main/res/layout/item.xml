@@ -69,9 +69,8 @@
         <ImageView
             android:id="@+id/img_corazon"
             android:layout_width="@dimen/dp_30"
-            android:padding="@dimen/dp_0"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/corazon_foreground"
+            app:srcCompat="@drawable/outline_favorite_border_24"
             android:layout_gravity="start"
             tools:ignore="VectorDrawableCompat"
             android:layout_marginRight="5dp"
@@ -100,22 +99,21 @@
 
             <ImageView
                 android:id="@+id/img_mano"
-                android:layout_width="30dp"
-                android:layout_height="@dimen/dp_30"
-                android:layout_gravity="top"
-                app:srcCompat="@drawable/mano_v"
-                android:layout_margin="@dimen/dp_5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/outline_library_music_24"
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/txt_mano"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
-                android:text="@string/me_gusta"
+                android:text="Disco"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/tab_indicator_text"
                 android:textSize="@dimen/dp_15" />
         </LinearLayout>
 
@@ -126,58 +124,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="100"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="@dimen/dp_30"
-                    android:layout_height="@dimen/dp_30"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="@dimen/dp_4"
-                    android:layout_marginLeft="@dimen/dp_4"
-                    android:layout_marginRight="@dimen/dp_4"
-                    app:srcCompat="@drawable/coment"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    app:srcCompat="@drawable/outline_textsms_24"
                     tools:ignore="VectorDrawableCompat" />
 
                 <TextView
                     android:id="@+id/txv_coment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:fontFamily="sans-serif"
                     android:gravity="center_vertical"
                     android:text="@string/comentar"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/tab_indicator_text"
                     android:textSize="@dimen/dp_15" />
 
 
             </LinearLayout>
+
+        <!-- tipo de musica -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dp_10"
             android:layout_weight="100">
 
             <ImageView
                 android:id="@+id/altavoz"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
-                app:srcCompat="@drawable/musica"
-                android:layout_marginTop="@dimen/dp_7"
-                android:layout_marginLeft="@dimen/dp_4"
-                android:layout_marginRight="@dimen/dp_4"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                app:srcCompat="@drawable/outline_thumb_up_24"
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/txv_mucica"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
-                android:text="Disco"
-                android:textSize="@dimen/dp_15"
+                android:text="@string/me_gusta"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/secondary_text_dark" />
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="@dimen/dp_15" />
 
         </LinearLayout>
 

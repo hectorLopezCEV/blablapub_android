@@ -17,6 +17,8 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import static com.cev.blablapub.R.id.menu_main;
+
 public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
@@ -39,6 +41,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
             toolbar.setTitle(R.string.app_name);
             toolbar.setTitleTextColor(getResources().getColor(R.color.base));
             toolbar.setBackgroundColor(getResources().getColor(R.color.blanco));
+            toolbar.inflateMenu( R.menu.menu_main);
         }
 
 
@@ -68,6 +71,10 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         startActivity(intent);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> javi_final
 
 
 }
