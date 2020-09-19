@@ -2,6 +2,7 @@ package com.cev.blablapub;
 
 import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
@@ -20,6 +21,8 @@ public class VistaDetalleBar extends AppCompatActivity {
     ImageView imagen;
     TextView nomNegocio;
     TextView anunNegocio;
+    Toolbar toolbar;
+    ImageView imgFlecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +30,21 @@ public class VistaDetalleBar extends AppCompatActivity {
         setContentView(R.layout.activity_vista_detalle_bar);
         Log.i("bla","/////VISTADETALLE_oncreate");
 
+        /*
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
         }
+
+         */
+
+
 
 
         //2 asociamos las variables a los campos del xml
         imagen = findViewById(R.id.imagenDetalle);  // para mostrar al crearse
         anunNegocio = findViewById(R.id.anuncioNegocio);
         nomNegocio = findViewById(R.id.nombreNegocio);
+        imgFlecha = findViewById(R.id.imv_flecha);
 
 
         // recibo del activity prueba el src
@@ -55,4 +64,17 @@ public class VistaDetalleBar extends AppCompatActivity {
 
 
     }
+
+    /*
+    metodo para volver al HomeActivity
+     */
+
+    public void volverHome(View v){
+        finish();
+
+    }
+
+
+
+
 }

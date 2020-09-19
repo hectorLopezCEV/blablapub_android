@@ -48,7 +48,7 @@
         android:id="@+id/sexo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/edad"
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:ems="10"
@@ -119,7 +119,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="23dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/ovalo"
         android:onClick="inscribirse"
         android:padding="10dp"
@@ -129,7 +129,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/aceptarCondiciones"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/aceptarCondiciones"
-        app:layout_constraintTop_toBottomOf="@+id/aceptarCondiciones"
-        app:layout_constraintVertical_bias="0.009" />
+        app:layout_constraintStart_toStartOf="@+id/aceptarCondiciones" />
 </androidx.constraintlayout.widget.ConstraintLayout>

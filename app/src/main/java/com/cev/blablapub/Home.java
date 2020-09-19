@@ -65,6 +65,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         listView.setAdapter(miAdapter);
     }
 
+    // click para la vista detalle
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
