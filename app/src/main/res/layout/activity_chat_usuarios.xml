@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VistaDetalleBar"
-    android:background="@color/blanco">
-
+    tools:context=".Chat_usuariosActivity">
 
     <TextView
-        android:id="@+id/nombreNegocio"
+        android:id="@+id/txv_chat_nombreNegocio"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#000000"
@@ -24,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imagenDetalle"
+        android:id="@+id/txv_chat_imagenDetalle"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -32,10 +29,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreNegocio" />
+        app:layout_constraintTop_toBottomOf="@+id/txv_chat_nombreNegocio" />
 
     <TextView
-        android:id="@+id/anuncioNegocio"
+        android:id="@+id/txv_chat_anuncioNegocio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -47,33 +44,31 @@
         android:text="Hoy 2x1 en Ginebras"
         android:textColor="@color/base"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imagenDetalle"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_chat_imagenDetalle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imv_flecha"
+        android:id="@+id/imv_chat_flecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
-        android:onClick="volverHome"
+        android:onClick="volverVistaDetalle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/outline_arrow_back_24"
         tools:ignore="VectorDrawableCompat" />
 
-    <GridView
-        android:id="@+id/grid_usuarios"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <ListView
+        android:id="@+id/lisv_chat"
+        android:layout_width="0dp"
+        android:layout_height="479dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imagenDetalle"
+        app:layout_constraintTop_toBottomOf="@id/txv_chat_imagenDetalle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:numColumns="3"/>
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -18,10 +16,10 @@ public class MiAdapter extends ArrayAdapter {
 
     Context context;
     int intemLayout;
-    Elemento[] datos; // referencia a mi clase
+    Pub[] datos; // referencia a mi clase
 
     // estos parametro se lo pasaremos en el activity prueba2
-    public MiAdapter(@NonNull Context context, int resource, @NonNull Elemento[] objects) {
+    public MiAdapter(@NonNull Context context, int resource, @NonNull Pub[] objects) {
         super(context, resource, objects);
 
        this.context = context;

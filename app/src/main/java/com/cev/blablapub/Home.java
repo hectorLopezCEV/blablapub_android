@@ -4,27 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.icu.text.CaseMap;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-import static com.cev.blablapub.R.id.menu_main;
 
 public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
     ListView listView;
-    Elemento[] negocios = new Elemento[4];
+    Pub[] negocios = new Pub[4];
     //1 ArrayList<Elemento> bares;
     Menu menu;
 
@@ -50,10 +41,10 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
 
         // rellenamos el array de los bares/*
-        negocios[0]= new Elemento("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
-        negocios[1]= new Elemento("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
-        negocios[2]= new Elemento("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
-        negocios[3]= new Elemento("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
+        negocios[0]= new Pub("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
+        negocios[1]= new Pub("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
+        negocios[2]= new Pub("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
+        negocios[3]= new Pub("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
 
         // asociamos la imagen a nuestro template
         listView = findViewById(R.id.lisv_listaImagenes);
