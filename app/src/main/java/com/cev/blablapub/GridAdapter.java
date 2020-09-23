@@ -44,7 +44,7 @@ public class GridAdapter extends ArrayAdapter {
         ahora que ya tenemos el Layout inflado ya podemos introducir las vistas
         pero antes hay que inflarlas
         */
-        ImageView fotoUsuario = convertView.findViewById(R.id.img_foto_usuario);
+        ImageView fotoUsuario = convertView.findViewById(R.id.img_circular);
         fotoUsuario.setImageResource(usuarios.get(position).imagen);
 
         // hacemos lo mismo con el nick

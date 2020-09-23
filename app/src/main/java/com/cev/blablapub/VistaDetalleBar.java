@@ -73,6 +73,15 @@ public class VistaDetalleBar extends AppCompatActivity implements AdapterView.On
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
 
         // creamos el objeto adapter y le ponemos un onClickListener
         GridAdapter miAdapter = new GridAdapter(this,R.layout.grid_layout,usuarios);

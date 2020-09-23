@@ -8,11 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 public class Chat_usuariosActivity extends AppCompatActivity  {
 
     // declaraciones
     ImageView fecla;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +22,9 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_chat_usuarios);
         Log.i("bla","////////Chat usuatios");
 
-
+        // instancias
         fecla = findViewById(R.id.imv_chat_flecha);
-
+        listView = findViewById(R.id.lisv_chat);
 
     }
 
