@@ -1,7 +1,6 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +12,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.cev.blablapub.PetitionsPost;
+import com.cev.blablapub.R;
+import com.cev.blablapub.activitys.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText nombre;
@@ -93,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
             petitionsPost.execute(url,name,email.getText().toString(),password.getText().toString(),edad.getText().toString(),hombre.isChecked()?"hombre":"mujer");
 
             // navegamos a la pantalla de login
-            Intent intent = new Intent(this,LoginActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }else{
             toastKO.show();

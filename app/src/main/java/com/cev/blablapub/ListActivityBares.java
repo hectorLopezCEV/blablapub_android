@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.ListAdapter;
 import android.content.SharedPreferences;
 
+import com.cev.blablapub.adapters.ListAdapterBares;
+import com.cev.blablapub.modelos.Bares;
+
 import java.util.ArrayList;
 
 public class ListActivityBares extends AppCompatActivity {
@@ -36,6 +39,7 @@ public class ListActivityBares extends AppCompatActivity {
         //Recuperamos el valor pasado a la actividad
         Intent intent = getIntent();
         String valorJsonPasado = intent.getStringExtra("valorJson");
+
         //Transformamos de Json a objeto
         listaBares = listaBares.fromJSON(valorJsonPasado);
         listaBar = listaBares.listaBar;

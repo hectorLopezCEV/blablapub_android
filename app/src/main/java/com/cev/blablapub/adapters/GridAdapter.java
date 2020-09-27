@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.Usuario;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -45,11 +47,11 @@ public class GridAdapter extends ArrayAdapter {
         pero antes hay que inflarlas
         */
         ImageView fotoUsuario = convertView.findViewById(R.id.img_circular);
-        fotoUsuario.setImageResource(usuarios.get(position).imagen);
+        fotoUsuario.setImageResource(usuarios.get(position).getImagen());
 
         // hacemos lo mismo con el nick
         TextView nick = convertView.findViewById(R.id.nick);
-        nick.setText(usuarios.get(position).nick);
+        nick.setText(usuarios.get(position).getNick());
 
         return convertView;
     }

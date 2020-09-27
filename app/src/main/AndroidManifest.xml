@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Chat_usuariosActivity"></activity>
+        <activity android:name=".activitys.Chat_usuariosActivity"></activity>
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".activitys.LoginActivity"
+            android:parentActivityName=".activitys.MainActivity" />
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +24,14 @@
         </activity>
         <activity
             android:name=".RecuperarCon"
-            android:parentActivityName=".LoginActivity" />
+            android:parentActivityName=".activitys.LoginActivity" />
         <activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".LoginActivity" />
-        <activity android:name=".Home" />
+            android:name=".activitys.RegisterActivity"
+            android:parentActivityName=".activitys.LoginActivity" />
+        <activity android:name=".activitys.Home" />
         <activity
-            android:name=".VistaDetalleBar"
-            android:parentActivityName=".Home" />
+            android:name=".activitys.VistaDetalleBarActivity"
+            android:parentActivityName=".activitys.Home" />
         <activity android:name=".ListActivityBares" />
     </application>
 

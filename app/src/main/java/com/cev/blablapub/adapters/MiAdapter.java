@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.Pub;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,17 +36,18 @@ public class MiAdapter extends ArrayAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if(convertView == null) {
             Log.d("mi adapter", "elemento numero " + position);
+
             // para construir la vista necesitamos el metodo inflater y le pasamos nuestro layout creado
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             convertView = layoutInflater.inflate(intemLayout, parent, false);
         }
         // ahora que tenemos la vista solo nos queda rellenarla con nuestra vista y nuestro array cogemos el texto y lo rellenamos
         TextView textView = convertView.findViewById(R.id.txv_nombre_establecimiento);
-        textView.setText(datos[position].texto);
+        textView.setText(datos[position].getTexto());
 
         // hacemos lo mismo con la vista la busdcamos en nuestro layout y le pasamos nuestra imagen
         ImageView imageView = convertView.findViewById(R.id.imageItem);
-        imageView.setImageResource(datos[position].imagen);
+        imageView.setImageResource(datos[position].getImagen());
 
         return convertView;
     }

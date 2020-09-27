@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cev.blablapub.modelos.Bares;
+import com.cev.blablapub.R;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -25,6 +29,7 @@ public class ListAdapterBares extends ArrayAdapter {
         this.itemLayout = resource;
         this.datos = objects;
     }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -32,10 +37,10 @@ public class ListAdapterBares extends ArrayAdapter {
         View view = layoutInflater.inflate(itemLayout, parent, false);
 
         TextView textCorto = view.findViewById(R.id.titulo);
-        textCorto.setText(datos.get(position).nombreBar);
+        textCorto.setText(datos.get(position).getNombreBar());
 
         TextView textLargo = view.findViewById(R.id.detalleInformacion);
-        textLargo.setText(datos.get(position).informacionBar);
+        textLargo.setText(datos.get(position).getNombreBar());
 
         ImageView imageView = view.findViewById(R.id.imagenBar);
 

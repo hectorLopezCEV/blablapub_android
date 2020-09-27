@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chat_usuariosActivity">
+    tools:context=".activitys.Chat_usuariosActivity">
 
     <TextView
         android:id="@+id/txv_chat_nombreNegocio"
@@ -64,11 +64,39 @@
 
     <ListView
         android:id="@+id/lisv_chat"
-        android:layout_width="0dp"
-        android:layout_height="479dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txv_chat_imagenDetalle"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txv_chat_imagenDetalle" />
+
+    <LinearLayout
+        android:id="@+id/lyt_chat_enviarMensajes"
+        android:padding="@dimen/dp_5"
+        android:layout_width="405dp"
+        android:layout_height="71dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Escribe texto"
+            android:layout_gravity="left"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

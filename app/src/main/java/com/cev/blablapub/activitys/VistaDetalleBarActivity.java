@@ -1,27 +1,24 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
-import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.media.Image;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.cev.blablapub.adapters.GridAdapter;
+import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
 
-public class VistaDetalleBar extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class VistaDetalleBarActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     //1 creamos las variables que vamos a modificar
     ImageView imagen;
     TextView nomNegocio;
@@ -38,12 +35,7 @@ public class VistaDetalleBar extends AppCompatActivity implements AdapterView.On
         setContentView(R.layout.activity_vista_detalle_bar);
         Log.i("bla","/////VISTADETALLE_oncreate");
 
-        /*
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-        }
 
-         */
         //2 asociamos las variables a los campos del xml
         imagen = findViewById(R.id.imagenDetalle);  // para mostrar al crearse
         anunNegocio = findViewById(R.id.anuncioNegocio);
@@ -96,6 +88,7 @@ public class VistaDetalleBar extends AppCompatActivity implements AdapterView.On
         // variable para la imagen que viene de prueba2
         int imagenList = intent.getIntExtra("imagenList", 0);
         String nombreList = intent.getStringExtra("nombreList");
+
         // compruebo el contenido del inten
         String nombrePromocion = intent.getStringExtra("nombrePromocion");
         imagen.setImageResource(imagenList);
@@ -119,7 +112,7 @@ public class VistaDetalleBar extends AppCompatActivity implements AdapterView.On
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-        Intent intent = new Intent(this,Chat_usuariosActivity.class);
+        Intent intent = new Intent(this, Chat_usuariosActivity.class);
 
         startActivity(intent);
     }

@@ -1,11 +1,11 @@
 package com.cev.blablapub;
 
 import android.os.AsyncTask;
-import android.view.View;
+
+import com.cev.blablapub.activitys.MainActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import java.util.List;
 
 import okhttp3.Request;
 import okhttp3.Response;

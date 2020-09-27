@@ -1,11 +1,9 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +12,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.CompoundButton;
 
-import androidx.annotation.ColorInt;
+import com.cev.blablapub.LoginService;
+import com.cev.blablapub.R;
+import com.cev.blablapub.activitys.LoginActivity;
+import com.cev.blablapub.activitys.RegisterActivity;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -23,7 +25,7 @@ import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener  {
-    public static final String EXTRA_MESSAGE = "com.cev.blablapub.RegisterActivity.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.cev.blablapub.activitys.RegisterActivity.MESSAGE";
 
     Button login;
     Button registro;
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     // metodo para ir al Activity Login
 
     public void irLogin(View v){
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
@@ -87,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     */
     public void abrirRegistro(View vista) {
 
-        Intent intent = new Intent(this,RegisterActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra(EXTRA_MESSAGE, "message");
         startActivity(intent);
     }

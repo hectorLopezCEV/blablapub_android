@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="#F27980"
-    tools:context=".MainActivity">
+    tools:context=".activitys.MainActivity">
 
     <!-- incluimos el toolbar que nosostros hemos creado -->
 

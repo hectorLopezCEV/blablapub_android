@@ -1,5 +1,6 @@
 package com.cev.blablapub;
 
+import com.cev.blablapub.modelos.Bares;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

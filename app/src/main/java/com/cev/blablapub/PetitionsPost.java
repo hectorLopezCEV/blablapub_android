@@ -15,7 +15,7 @@ import okhttp3.Response;
 public class PetitionsPost extends AsyncTask<String,Void,String> {
     Context context;
 
-    PetitionsPost(Context context){
+    public PetitionsPost(Context context){
         this.context = context;
     }
 

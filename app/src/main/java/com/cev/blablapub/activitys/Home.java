@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +10,11 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.cev.blablapub.adapters.MiAdapter;
+import com.cev.blablapub.Promocion;
+import com.cev.blablapub.modelos.Pub;
+import com.cev.blablapub.R;
 
 public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
@@ -60,10 +65,10 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-        Intent intent = new Intent(this,VistaDetalleBar.class);
-        intent.putExtra("imagenList",this.negocios[i].imagen);
-        intent.putExtra("nombreList",this.negocios[i].texto);
-        intent.putExtra("nombrePromocion",this.negocios[i].promocion.titulo);
+        Intent intent = new Intent(this, VistaDetalleBarActivity.class);
+        intent.putExtra("imagenList",this.negocios[i].getImagen());
+        intent.putExtra("nombreList",this.negocios[i].getTexto());
+        intent.putExtra("nombrePromocion",this.negocios[i].getPromocion().titulo);
         startActivity(intent);
     }
 

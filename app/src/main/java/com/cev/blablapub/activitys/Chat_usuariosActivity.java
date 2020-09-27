@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.cev.blablapub.R;
 
 public class Chat_usuariosActivity extends AppCompatActivity  {
 

@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,9 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.cev.blablapub.R;
+import com.cev.blablapub.RecuperarCon;
+import com.cev.blablapub.activitys.Home;
+
 public class LoginActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.cev.blablapub.RegisterActivity.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.cev.blablapub.activitys.RegisterActivity.MESSAGE";
 
 
     Button login;
@@ -71,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // metodo para navegar al Activiti recuperar contraseña
     public void recuperarCon (View view){
-        Intent intent = new Intent(this,RecuperarCon.class);
+        Intent intent = new Intent(this, RecuperarCon.class);
         startActivity(intent);
     }
 
