@@ -16,4 +16,5 @@
     <string name="comentar">Comentar</string>
     <string name="perfil">Perfil</string>
     <string name="lupa">Buscar</string>
+    <string name="escribe_un_mensaje">Escribe un mensaje</string>
 </resources>
