@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // añadimos el splash
+        setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i("bla","/////////////////MainActivity");

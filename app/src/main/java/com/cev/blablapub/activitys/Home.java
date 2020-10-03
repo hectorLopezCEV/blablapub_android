@@ -27,6 +27,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.i("bla","//////HOME_oncreate");
@@ -42,14 +43,12 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
             toolbar.inflateMenu( R.menu.menu_main);
         }
 
-
-
-
         // rellenamos el array de los bares/*
         negocios[0]= new Pub("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
         negocios[1]= new Pub("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
         negocios[2]= new Pub("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
         negocios[3]= new Pub("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
+        // todo hacer que los negocios se guarden en la base de datos
 
         // asociamos la imagen a nuestro template
         listView = findViewById(R.id.lisv_listaImagenes);

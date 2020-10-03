@@ -8,22 +8,43 @@
 
     <TextView
         android:id="@+id/txv_chat_nombreNegocio"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
         android:background="#000000"
         android:gravity="center"
-        android:text="Pub ejemplo app"
+        android:maxLines="1"
+        android:paddingRight="@dimen/dp_25"
+        android:text="Ejemplo de negocio"
         android:textColor="@color/base"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lyt_flecha"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/lyt_flecha"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:paddingLeft="@dimen/dp_3"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_chat_flecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="volverVistaDetalle"
+            app:srcCompat="@drawable/outline_arrow_back_24"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
     <ImageView
-        android:id="@+id/txv_chat_imagenDetalle"
+        android:id="@+id/img_chat_imagenDetalle"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
         android:src="@drawable/rolling"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,36 +62,24 @@
         android:layout_marginRight="24dp"
         android:background="@drawable/anuncios"
         android:gravity="center"
-        android:text="Hoy 2x1 en Ginebras"
+        android:maxLines="3"
+        android:text="Barra libre a las 5:00"
         android:textColor="@color/base"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txv_chat_imagenDetalle"
+        app:layout_constraintBottom_toBottomOf="@+id/img_chat_imagenDetalle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imv_chat_flecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:onClick="volverVistaDetalle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/outline_arrow_back_24"
-        tools:ignore="VectorDrawableCompat" />
 
     <ListView
         android:id="@+id/lisv_chat"
         android:layout_width="413dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/lyt_chat_enviarMensajes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txv_chat_imagenDetalle" />
+        app:layout_constraintTop_toBottomOf="@id/img_chat_imagenDetalle" />
 
     <!-- contenedor padre  -->
 
@@ -78,7 +87,7 @@
         android:id="@+id/lyt_chat_enviarMensajes"
         android:padding="@dimen/dp_1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
+        android:layout_height="@dimen/dp_55"
         android:orientation="horizontal"
         android:background="@drawable/rolling"
         app:layout_constraintBottom_toBottomOf="parent"
