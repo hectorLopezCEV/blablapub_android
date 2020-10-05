@@ -1,6 +1,7 @@
 package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cev.blablapub.R;
+import com.cev.blablapub.adapters.ChatAdapter;
+import com.cev.blablapub.modelos.Usuario;
+
+import java.util.ArrayList;
 
 public class Chat_usuariosActivity extends AppCompatActivity  {
 
@@ -21,6 +26,8 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
     private ImageView imageView;
     private TextView nomPub;
     private TextView anuncioPub;
+    private ImageView imagenPorDefecto;
+    private ArrayList<Usuario> usuarios;
 
 
     public ImageView getFecla() {
@@ -63,6 +70,11 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         this.anuncioPub = anuncioPub;
     }
 
+    public ImageView getImagenPorDefecto(){
+        return imagenPorDefecto;
+    }
+    // todo hacer que todos tengan una imagen por defecto que sacaremos de la base de datos
+
 
 
     @Override
@@ -78,6 +90,11 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         anuncioPub = findViewById(R.id.txv_chat_anuncioNegocio);
         nomPub = findViewById(R.id.txv_nombre_establecimiento);
 
+        usuarios = new ArrayList<Usuario>();
+        usuarios.add(new Usuario(R.mipmap.barbas,"Barbas"));
+        usuarios.add(new Usuario(R.mipmap.el_gafas,"Gafas"));
+        usuarios.add(new Usuario(R.mipmap.rubio,"rubio"));
+
         // implementamos las vistas
 
         // compruebo el contenido del inten
@@ -89,6 +106,11 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         //nomPub.setText("nombreList");
         //anuncioPub.setText("nombrePromocion");
 
+
+
+        ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
+        listView.setDivider(null);
+        listView.setAdapter(chatAdapter);
     }
 
 

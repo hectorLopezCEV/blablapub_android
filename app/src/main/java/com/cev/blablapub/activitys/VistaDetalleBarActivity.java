@@ -82,6 +82,7 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
         usuarios.add(new Usuario(R.mipmap.barbas,"Bagabundo"));
+        // todo solucionar este listado para que lo coja de la base de datos
 
         // creamos el objeto adapter y le ponemos un onClickListener
         GridAdapter miAdapter = new GridAdapter(this,R.layout.grid_layout,usuarios);

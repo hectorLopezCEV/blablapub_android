@@ -6,11 +6,12 @@ import java.util.ArrayList;
 
 // creo que se puede eliminar esta clase, eperaremos un podo
 
-public class Pub {
+public class Negocio {
     private String texto;
     private int imagen;
     private Promocion promocion;
     private long id;
+    private String tipo;
 
     public long getId() {
         return id;
@@ -44,22 +45,30 @@ public class Pub {
         this.promocion = promocion;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
 
     // constructores ///
-    public Pub(String texto, int imagenElemento, Promocion promocion) {
+    public Negocio(String texto, int imagenElemento, Promocion promocion) {
         this.texto = texto;
         this.imagen = imagenElemento;
         this.promocion = promocion;
     }
 
-    public Pub(String texto, int imagen, Promocion promocion, long id) {
+    public Negocio(String texto, int imagen, Promocion promocion, long id) {
         this.texto = texto;
         this.imagen = imagen;
         this.promocion = promocion;
         this.id = id;
     }
 
-    public Pub() {
+    public Negocio() {
     }
 
 

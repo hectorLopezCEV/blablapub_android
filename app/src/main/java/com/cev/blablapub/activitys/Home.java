@@ -13,14 +13,14 @@ import android.widget.ListView;
 
 import com.cev.blablapub.adapters.MiAdapter;
 import com.cev.blablapub.Promocion;
-import com.cev.blablapub.modelos.Pub;
+import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.R;
 
 public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
     ListView listView;
-    Pub[] negocios = new Pub[4];
+    Negocio[] negocios = new Negocio[4];
     //1 ArrayList<Elemento> bares;
     Menu menu;
 
@@ -44,11 +44,11 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         }
 
         // rellenamos el array de los bares/*
-        negocios[0]= new Pub("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
-        negocios[1]= new Pub("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
-        negocios[2]= new Pub("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
-        negocios[3]= new Pub("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
-        // todo hacer que los negocios se guarden en la base de datos
+        negocios[0]= new Negocio("BAR PLAZA",R.drawable.camarero, new Promocion("Promoción 2x1"));
+        negocios[1]= new Negocio("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
+        negocios[2]= new Negocio("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
+        negocios[3]= new Negocio("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
+        // todo hacer que los negocios se guarden en la base de datos y valorar si es mejor un arrayList
 
         // asociamos la imagen a nuestro template
         listView = findViewById(R.id.lisv_listaImagenes);

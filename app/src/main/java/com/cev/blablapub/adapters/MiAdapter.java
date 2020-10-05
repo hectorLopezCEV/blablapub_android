@@ -10,24 +10,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cev.blablapub.R;
-import com.cev.blablapub.modelos.Pub;
+import com.cev.blablapub.modelos.Negocio;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+
+/*
+    Adapter para el home
+ */
 
 public class MiAdapter extends ArrayAdapter {
 
     Context context;
     int intemLayout;
-    Pub[] datos; // referencia a mi clase
+    Negocio[] negocios; // referencia a mi clase
 
     // estos parametro se lo pasaremos en el activity prueba2
-    public MiAdapter(@NonNull Context context, int resource, @NonNull Pub[] objects) {
+    public MiAdapter(@NonNull Context context, int resource, @NonNull Negocio[] objects) {
         super(context, resource, objects);
 
        this.context = context;
        this.intemLayout= resource;
-       this.datos = objects;
+       this.negocios = objects;
 
     }
 
@@ -43,11 +48,11 @@ public class MiAdapter extends ArrayAdapter {
         }
         // ahora que tenemos la vista solo nos queda rellenarla con nuestra vista y nuestro array cogemos el texto y lo rellenamos
         TextView textView = convertView.findViewById(R.id.txv_nombre_establecimiento);
-        textView.setText(datos[position].getTexto());
+        textView.setText(negocios[position].getTexto());
 
         // hacemos lo mismo con la vista la busdcamos en nuestro layout y le pasamos nuestra imagen
         ImageView imageView = convertView.findViewById(R.id.imageItem);
-        imageView.setImageResource(datos[position].getImagen());
+        imageView.setImageResource(negocios[position].getImagen());
 
         return convertView;
     }

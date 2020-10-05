@@ -10,6 +10,7 @@ public class Usuario {
     private String email;
     private int edad;
     private boolean conectado;
+    private int imagen_por_defecto;
 
     // constructor
     public Usuario() {
@@ -78,6 +79,14 @@ public class Usuario {
 
     public void setNick(String nick) {
         this.nick = nick;
+    }
+
+    public int getImagen_por_defecto() {
+        return imagen_por_defecto;
+    }
+
+    public void setImagen_por_defecto(int imagen_por_defecto) {
+        this.imagen_por_defecto = imagen_por_defecto;
     }
 }
 

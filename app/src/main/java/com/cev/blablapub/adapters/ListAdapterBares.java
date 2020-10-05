@@ -15,8 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-
+/*
 public class ListAdapterBares extends ArrayAdapter {
+
 
     Context context;
     int itemLayout;
@@ -46,4 +47,9 @@ public class ListAdapterBares extends ArrayAdapter {
 
         return view;
     }
+
+
 }
+
+*/
+// todo valorar eliminar este adapter que esta ligado a la clase listActivityBares y creo que no tiene funcionalidad

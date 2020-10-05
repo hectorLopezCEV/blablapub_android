@@ -116,6 +116,7 @@
                 android:background="#FBE1E1E1"/>
 
             <EditText
+                android:id="@+id/edt_chat_mensaje"
                 android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

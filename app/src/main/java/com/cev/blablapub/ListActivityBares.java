@@ -14,11 +14,11 @@ import android.widget.ListView;
 import android.widget.ListAdapter;
 import android.content.SharedPreferences;
 
-import com.cev.blablapub.adapters.ListAdapterBares;
+//import com.cev.blablapub.adapters.ListAdapterBares;
 import com.cev.blablapub.modelos.Bares;
 
 import java.util.ArrayList;
-
+/*
 public class ListActivityBares extends AppCompatActivity {
 
     ListView lista;
@@ -78,3 +78,6 @@ public class ListActivityBares extends AppCompatActivity {
         this.finish();
     }
 }
+*/
+
+// todo valorar eliminar esta clase

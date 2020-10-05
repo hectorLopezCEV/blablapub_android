@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/dp_5"
+    android:padding="@dimen/dp_10"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_cardView"
-        android:elevation="@dimen/dp_25"
-        android:backgroundTint="@color/blanco"
-        app:cardCornerRadius="@dimen/dp_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/base">
-
-        <!-- foto y texto -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-        <!-- foto  -->
+    <!-- foto -->
     <LinearLayout
+        android:id="@+id/lyt_fofo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_10"
         android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_circular"
-            android:layout_width="@dimen/dp_30"
-            android:layout_height="@dimen/dp_30"
-            android:src="@mipmap/loco"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
-            />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_chat_usuario"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/loco"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                />
     </LinearLayout>
+
+
+
+
+
         <!-- texto -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_30"
-            android:background="@drawable/texto_mensaje"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+            <!--
             <TextView
+                android:id="@+id/txv_nick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hola javai"/>
+                android:layout_margin="@dimen/dp_3"
+                android:text="apoddo"
+                android:textColor="@color/base"
+                android:textSize="?attr/listPreferredItemPaddingEnd" /> -->
+            <!-- texto -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cardView"
+                android:elevation="@dimen/dp_25"
+                android:backgroundTint="#F9F3F2F2"
+                app:cardCornerRadius="@dimen/dp_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txv_texto_mensaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="hola javi"
+                    android:textColor="#090909"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </androidx.cardview.widget.CardView>
+
 
         </LinearLayout>
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
 
 
 </LinearLayout>
