@@ -122,10 +122,16 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+        /*
+        paso  el mismo diseño a el activity chat
+         */
         Intent intent = new Intent(this, Chat_usuariosActivity.class);
         intent.putExtra("anuncio",h_nombrePromocion);
         intent.putExtra("nomPub",h_nomPub);
-        intent.putExtra("imagen",v_imagen.getId());
+        intent.putExtra("imagen",v_imagen.getId()); // como es una imagen le paso el id
+        intent.putExtra("imagen_usuario",usuarios.get(i).getImagen());
+        intent.putExtra("nick_usuario",usuarios.get(i).getNick());
+
 
         startActivity(intent);
     }

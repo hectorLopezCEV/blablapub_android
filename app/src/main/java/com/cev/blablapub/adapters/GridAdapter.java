@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cev.blablapub.R;
 import com.cev.blablapub.modelos.Usuario;
@@ -35,6 +36,7 @@ public class GridAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
 
         // capa de seguridad por si viene vacio la vista
         if ( convertView == null){

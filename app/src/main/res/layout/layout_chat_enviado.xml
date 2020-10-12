@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorAccent"
+    android:padding="@dimen/dp_5"
     android:orientation="vertical">
+
+    <!--
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_cardView"
@@ -16,24 +18,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:background="@color/base">
+        -->
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_gravity="right"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_60"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hola javai"
-                android:textColor="@color/cardview_dark_background" />
+                android:paddingTop="@dimen/dp_1"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="hola javiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiai"
+                android:background="@drawable/diseno_chat_envio"
+                android:textColor="#090909"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
         </LinearLayout>
 
 
 
-"
-    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>

@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.cev.blablapub.adapters.MiAdapter;
 import com.cev.blablapub.Promocion;
@@ -23,6 +25,8 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
     Negocio[] negocios = new Negocio[4];
     //1 ArrayList<Elemento> bares;
     Menu menu;
+
+
 
 
     @Override
@@ -58,6 +62,11 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         MiAdapter miAdapter = new MiAdapter(this,R.layout.item,negocios);
         // le pasamos a la lista el adapter
         listView.setAdapter(miAdapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     // click para la vista detalle

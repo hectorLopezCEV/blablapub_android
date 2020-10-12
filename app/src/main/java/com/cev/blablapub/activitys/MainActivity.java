@@ -2,6 +2,7 @@ package com.cev.blablapub.activitys;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.cev.blablapub.LoginService;
 import com.cev.blablapub.R;
@@ -31,11 +33,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     Button registro;
     Button recovery;
     ImageView imagenTarta;
-
     LinearLayout vistaLogin;
     EditText loginEmail;
     EditText loginPassword;
     Button loginButton;
+    SharedPreferences shared;
 
 
 
@@ -74,6 +76,25 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // todo cambiar esta validacion de las shared a una en la bbdd
+        /*
+        comprobar que el login del usuario es el correcto de la bbdd
+         */
+        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+        String login = shared.getString("login","");
+
+        if(login.equals("javi")){
+            Toast.makeText(this,"Bienvenido  "+ login,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
 

@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,21 +24,95 @@ import java.util.ArrayList;
 public class Chat_usuariosActivity extends AppCompatActivity  {
 
     // declaraciones
-    private ImageView fecla;
+    private ImageView flecha;
     private ListView listView;
     private ImageView imageView;
     private TextView nomPub;
     private TextView anuncioPub;
     private ImageView imagenPorDefecto;
     private ArrayList<Usuario> usuarios;
+    private EditText texto;
+    private ImageButton boton;
 
+
+
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chat_usuarios);
+        Log.i("bla","////////Chat usuatios");
+
+        // instancias
+        flecha = findViewById(R.id.img_chat_flecha);
+        listView = findViewById(R.id.lisv_chat);
+        imageView = findViewById(R.id.img_chat_imagenDetalle);
+        anuncioPub = findViewById(R.id.txv_chat_anuncioNegocio);
+        nomPub = findViewById(R.id.txv_chat_nombreNegocio);
+        texto = findViewById(R.id.edt_chat_mensaje);
+        boton = findViewById(R.id.btn_imageButton);
+
+
+        usuarios = new ArrayList<Usuario>();
+        /*
+        usuarios.add(new Usuario(R.mipmap.barbas,"Barbas",texto.getText().toString()));
+        usuarios.add(new Usuario(R.mipmap.el_gafas,"Gafas",texto.getText().toString()));
+        usuarios.add(new Usuario(R.mipmap.rubio,"rubio",texto.getText().toString()));
+
+         */
+
+
+        // implementamos las vistas
+
+
+        /*
+        logica para el diseño del activity del chat
+        cogemos lo que nos llega de vista detalle , foto,promocion,local,imagen...
+        y se lo pasamos al diseño
+         */
+        Intent intent = getIntent();
+        int imagenList = intent.getIntExtra("imagen", 0);
+        String nombreList = intent.getStringExtra("nomPub");
+        String nombrePromocion = intent.getStringExtra("anuncio");
+        final int imagenUsuario = intent.getIntExtra("imagen_usuario",0);
+        final String nick = intent.getStringExtra("nick_usuario");
+
+        imageView.setId(imagenList); // todo esta imagen hay que cogerla de la base de datos
+        nomPub.setText(nombreList);
+        anuncioPub.setText(nombrePromocion);
+
+
+
+
+
+        final ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
+
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              // le paso al metodo del adapter el mensaje del usuario
+                // como no tengo imagenes de usuarios en la bbdd los cojo del drawable
+              chatAdapter.addMensaje(new Usuario(imagenUsuario,nick,texto.getText().toString()));
+              texto.setText("");
+              // todo hacer que el display del texto desaparezca cuando ya he escrito el texto
+
+            }
+        });
+
+
+
+        listView.setDivider(null);
+        listView.setAdapter(chatAdapter);
+    }
 
     public ImageView getFecla() {
-        return fecla;
+        return flecha;
     }
 
     public void setFecla(ImageView fecla) {
-        this.fecla = fecla;
+        this.flecha = fecla;
     }
 
     public ListView getListView() {
@@ -74,44 +151,6 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         return imagenPorDefecto;
     }
     // todo hacer que todos tengan una imagen por defecto que sacaremos de la base de datos
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_usuarios);
-        Log.i("bla","////////Chat usuatios");
-
-        // instancias
-        fecla = findViewById(R.id.img_chat_flecha);
-        listView = findViewById(R.id.lisv_chat);
-        imageView = findViewById(R.id.img_chat_imagenDetalle);
-        anuncioPub = findViewById(R.id.txv_chat_anuncioNegocio);
-        nomPub = findViewById(R.id.txv_nombre_establecimiento);
-
-        usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario(R.mipmap.barbas,"Barbas"));
-        usuarios.add(new Usuario(R.mipmap.el_gafas,"Gafas"));
-        usuarios.add(new Usuario(R.mipmap.rubio,"rubio"));
-
-        // implementamos las vistas
-
-        // compruebo el contenido del inten
-        Intent intent = getIntent();
-        int imagenList = intent.getIntExtra("imagen", 0);
-        String nombreList = intent.getStringExtra("nomPub");
-        String nombrePromocion = intent.getStringExtra("anuncio");
-        //imageView.setImageResource(imagenList); // todo esta imagen hay que cogerla de la base de datos
-        //nomPub.setText("nombreList");
-        //anuncioPub.setText("nombrePromocion");
-
-
-
-        ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
-        listView.setDivider(null);
-        listView.setAdapter(chatAdapter);
-    }
 
 
 
