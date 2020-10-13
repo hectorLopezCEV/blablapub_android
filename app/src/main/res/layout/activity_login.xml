@@ -1,91 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    tools:context=".activitys.LoginActivity"
     android:layout_height="match_parent"
-    android:background="@color/base"
-    tools:context=".activitys.LoginActivity">
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
-    <include
-        android:id="@+id/mitoolbar"
-        layout="@layout/toolbar" />
+    <!-- liner para el appbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/mitoolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- EL TAMAÑO DE LA IMAGEN PUEDE AFECTAR A OTROS DISPOSITIVOS
-    DONDE EL WRAP_CONTENT SEA MAS GRANDE O PEQUEÑO INTENTAR SACAR
-    LA IMAGEN EN VARIOS TAMAÑOS PARA CADA DISPOSITIVO -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollview_login"
+            android:background="@color/base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
 
-    <ImageView
-        android:id="@+id/img_blabla"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mitoolbar"
-        app:srcCompat="@drawable/logolyrics" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_blabla"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logolyrics" />
 
-    <EditText
-        android:id="@+id/edt_mail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="Email"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/edt_password"
-        app:layout_constraintEnd_toEndOf="@+id/img_blabla"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/img_blabla" />
 
-    <EditText
-        android:id="@+id/edt_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
-        app:layout_constraintEnd_toEndOf="@+id/edt_mail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_mail" />
+                <EditText
+                    android:id="@+id/edt_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="250dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Email"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_blabla" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/ovalo"
-        android:minWidth="250dp"
-        android:onClick="loginOnClick"
-        android:text="Login"
-        android:textColor="#FAF9E6"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/recovery"
-        app:layout_constraintEnd_toEndOf="@+id/edt_password"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_password" />
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_mail" />
 
-    <Button
-        android:id="@+id/recovery"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="60dp"
-        android:background="@drawable/anuncios"
-        android:onClick="recuperarCon"
-        android:padding="10dp"
-        android:text="Recuperar contraseña"
-        android:textColor="#FAF9E6"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/loginButton" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/ovalo"
+                    android:minWidth="250dp"
+                    android:onClick="loginOnClick"
+                    android:text="Login"
+                    android:textColor="#FAF9E6"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@id/recovery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_password" />
+
+                <Button
+                    android:id="@+id/recovery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/anuncios"
+                    android:onClick="recuperarCon"
+                    android:padding="10dp"
+                    android:text="Recuperar contraseña"
+                    android:textColor="#FAF9E6"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+

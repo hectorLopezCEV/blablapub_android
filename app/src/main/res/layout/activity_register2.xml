@@ -1,133 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F27980"
-    tools:context=".activitys.RegisterActivity">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/txv_email_recu_con"
-        app:layout_constraintStart_toStartOf="@+id/txv_email_recu_con"
-        app:layout_constraintTop_toBottomOf="@+id/txv_email_recu_con" />
 
-    <EditText
-        android:id="@+id/txv_email_recu_con"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/apellido"
-        app:layout_constraintStart_toStartOf="@+id/apellido"
-        app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
-    <EditText
-        android:id="@+id/edad"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Edad"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollview_login"
+        android:background="@color/base"
+        tools:context=".activitys.RegisterActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <RadioGroup
-        android:id="@+id/sexo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/edad"
-        app:layout_constraintStart_toStartOf="@+id/edad"
-        app:layout_constraintTop_toBottomOf="@+id/edad">
 
-        <RadioButton
-            android:id="@+id/hombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hombre" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
 
-        <RadioButton
-            android:id="@+id/mujer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mujer" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/txv_email_recu_con"
+                app:layout_constraintStart_toStartOf="@+id/txv_email_recu_con"
+                app:layout_constraintTop_toBottomOf="@+id/txv_email_recu_con" />
 
-        <RadioButton
-            android:id="@+id/na"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="N/A" />
-    </RadioGroup>
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/repite_password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/password"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <CheckBox
-        android:id="@+id/aceptarCondiciones"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Acepto condiciones de uso"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/sexo"
-        app:layout_constraintStart_toStartOf="@+id/sexo"
-        app:layout_constraintTop_toBottomOf="@+id/sexo" />
+            <EditText
+                android:id="@+id/txv_email_recu_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/apellido"
+                app:layout_constraintStart_toStartOf="@+id/apellido"
+                app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
-    <EditText
-        android:id="@+id/apellido"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Apellidos"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/nombre"
-        app:layout_constraintStart_toStartOf="@+id/nombre"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+            <EditText
+                android:id="@+id/edad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/password2"
+                app:layout_constraintStart_toStartOf="@+id/password2"
+                app:layout_constraintTop_toBottomOf="@+id/password2" />
 
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <RadioGroup
+                android:id="@+id/sexo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/edad"
+                app:layout_constraintStart_toStartOf="@+id/edad"
+                app:layout_constraintTop_toBottomOf="@+id/edad">
 
-    <Button
-        android:id="@+id/btn_registro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="60dp"
-        android:background="@drawable/ovalo"
-        android:onClick="inscribirse"
-        android:padding="10dp"
-        android:text="registro"
-        android:textColor="#FAF9E6"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/aceptarCondiciones"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/aceptarCondiciones" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <RadioButton
+                    android:id="@+id/hombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hombre" />
+
+                <RadioButton
+                    android:id="@+id/mujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mujer" />
+
+                <RadioButton
+                    android:id="@+id/na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/aceptarCondiciones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Acepto condiciones de uso"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/sexo"
+                app:layout_constraintStart_toStartOf="@+id/sexo"
+                app:layout_constraintTop_toBottomOf="@+id/sexo" />
+
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Apellidos"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/nombre"
+                app:layout_constraintStart_toStartOf="@+id/nombre"
+                app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:ems="10"
+                android:hint="@string/nombre_no_es_tu_nick"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_registro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ovalo"
+                android:onClick="inscribirse"
+                android:padding="10dp"
+                android:text="registro"
+                android:textColor="#FAF9E6"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/sexo"
+                app:layout_constraintStart_toStartOf="@+id/sexo"
+                app:layout_constraintTop_toBottomOf="@id/aceptarCondiciones" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+

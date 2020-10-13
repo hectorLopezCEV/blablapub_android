@@ -20,4 +20,6 @@
     <string name="lupa">Buscar</string>
     <string name="escribe_un_mensaje">Escribe un mensaje</string>
     <string name="te_has_registrado">¿Te has registrado?</string>
+    <string name="repite_password">Repite password</string>
+    <string name="nombre_no_es_tu_nick">Nombre (no es tu nick)</string>
 </resources>

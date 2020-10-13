@@ -1,69 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview_recuperar_contrasena"
+    android:background="@color/base"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F27980"
-    tools:context=".RecuperarCon">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecuperarCon">
 
 
-    <TextView
-        android:id="@+id/txv_anunciado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/introduce_tu_email_para_recuperar_tu_contrase_a"
-        android:textColor="#FAF9E6"
-        app:layout_constraintBottom_toTopOf="@+id/txv_email_recu_con"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txv_anunciado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/introduce_tu_email_para_recuperar_tu_contrase_a"
+            android:textColor="#FAF9E6"
+            app:layout_constraintBottom_toTopOf="@+id/txv_email_recu_con"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_copa_recuperar_con" />
 
-    <EditText
-        android:id="@+id/txv_email_recu_con"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textPersonName"
-        android:textColorHint="#F6F3E2"
-        app:layout_constraintBottom_toTopOf="@+id/btn_button_recu_con"
-        app:layout_constraintEnd_toEndOf="@+id/txv_anunciado"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/txv_anunciado" />
+        <EditText
+            android:id="@+id/txv_email_recu_con"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            android:textColorHint="#F6F3E2"
+            app:layout_constraintEnd_toEndOf="@+id/txv_anunciado"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/txv_anunciado"
+            app:layout_constraintTop_toBottomOf="@id/txv_anunciado"
+            android:layout_marginTop="@dimen/dp_15"
+            tools:layout_editor_absoluteY="466dp" />
 
-    <!-- LA IMAGEN DE LA COPA NO CRECE, INTENTAR CONSEGUIR
-     UN TAMAÑO PARA DISPOSITIVO-->
-    <Button
-        android:id="@+id/btn_button_recu_con"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:background="@drawable/ovalo"
-        android:onClick="conexionPost"
-        android:text="@string/aceptar"
-        android:textColor="#FAF9E6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txv_email_recu_con"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txv_email_recu_con" />
+        <!-- LA IMAGEN DE LA COPA NO CRECE, INTENTAR CONSEGUIR
+         UN TAMAÑO PARA DISPOSITIVO-->
+        <Button
+            android:id="@+id/btn_button_recu_con"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ovalo"
+            android:onClick="conexionPost"
+            android:text="@string/aceptar"
+            android:textColor="#FAF9E6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txv_email_recu_con"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txv_email_recu_con"
+            app:layout_constraintTop_toBottomOf="@id/txv_email_recu_con" />
 
-    <ImageView
-        android:id="@+id/img_copa_recuperar_con"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/img_copa_recuperar_con"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
