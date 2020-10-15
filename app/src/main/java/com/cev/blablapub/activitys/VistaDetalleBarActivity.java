@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,8 +13,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cev.blablapub.ListaDeNegocios;
 import com.cev.blablapub.adapters.GridAdapter;
 import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
@@ -33,9 +36,10 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
     GridView v_gridView;
     // creamos un array de usuarios para pasarlos al adapter
     ArrayList<Usuario> usuarios;
-
     String h_nombrePromocion,h_nomPub;
     int h_imagenList;
+    SharedPreferences shared;
+    ListaDeNegocios listaDeNegocios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,24 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
         v_imgFlecha = findViewById(R.id.imv_flecha);
         v_gridView = findViewById(R.id.grid_usuarios);
         v_gridView.setOnItemClickListener(this);
+
+        // todo hacer la peticion a la bbdd en vez de a las shared
+        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+        String listjson = shared.getString("blablapub","");
+        Log.d("negocios",listjson);
+        if (!listjson.isEmpty()){
+            listaDeNegocios = new ListaDeNegocios();
+            listaDeNegocios = listaDeNegocios.jsonToListaDeNegocios(listjson);
+            for (Negocio n: listaDeNegocios.negocios
+                 ) {
+                Log.i("//////////negocios","negocio "+ n.getNombre()+" existe");
+            }
+        }else{
+            listaDeNegocios = new ListaDeNegocios();
+        }
+
+
+
 
         // LOGICA DEL ADPATER ///////
         // instancias para el adapter y rrellenado del array
@@ -128,7 +150,7 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
         Intent intent = new Intent(this, Chat_usuariosActivity.class);
         intent.putExtra("anuncio",h_nombrePromocion);
         intent.putExtra("nomPub",h_nomPub);
-        intent.putExtra("imagen",v_imagen.getId()); // como es una imagen le paso el id
+        //intent.putExtra("imagen",listaDeNegocios.negocios.get(i).getImagen());
         intent.putExtra("imagen_usuario",usuarios.get(i).getImagen());
         intent.putExtra("nick_usuario",usuarios.get(i).getNick());
 

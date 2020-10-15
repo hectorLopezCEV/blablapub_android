@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/scrollview_login"
-        android:background="@color/base"
-        tools:context=".activitys.RegisterActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:background="@color/base"
+            tools:context=".activitys.RegisterActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
            >
@@ -65,48 +58,49 @@
                 app:layout_constraintStart_toStartOf="@+id/password2"
                 app:layout_constraintTop_toBottomOf="@+id/password2" />
 
-            <RadioGroup
-                android:id="@+id/sexo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="horizontal"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="@+id/edad"
-                app:layout_constraintStart_toStartOf="@+id/edad"
-                app:layout_constraintTop_toBottomOf="@+id/edad">
+    <RadioGroup
+        android:id="@+id/sexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/edad"
+        app:layout_constraintStart_toStartOf="@+id/edad"
+        app:layout_constraintTop_toBottomOf="@+id/edad">
 
-                <RadioButton
-                    android:id="@+id/hombre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hombre" />
+        <RadioButton
+            android:id="@+id/hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre" />
 
-                <RadioButton
-                    android:id="@+id/mujer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mujer" />
+        <RadioButton
+            android:id="@+id/mujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer" />
 
-                <RadioButton
-                    android:id="@+id/na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="N/A" />
-            </RadioGroup>
+        <RadioButton
+            android:id="@+id/na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A" />
+    </RadioGroup>
 
-            <CheckBox
-                android:id="@+id/aceptarCondiciones"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Acepto condiciones de uso"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="@+id/sexo"
-                app:layout_constraintStart_toStartOf="@+id/sexo"
-                app:layout_constraintTop_toBottomOf="@+id/sexo" />
+    <CheckBox
+        android:id="@+id/aceptarCondiciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Acepto condiciones de uso"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/sexo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sexo"
+        app:layout_constraintTop_toBottomOf="@+id/sexo" />
 
-            <EditText
+    <EditText
                 android:id="@+id/apellido"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,46 +112,43 @@
                 app:layout_constraintStart_toStartOf="@+id/nombre"
                 app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
-            <EditText
-                android:id="@+id/nombre"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
-                android:ems="10"
-                android:hint="@string/nombre_no_es_tu_nick"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:hint="@string/nombre_no_es_tu_nick"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btn_registro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/ovalo"
-                android:onClick="inscribirse"
-                android:padding="10dp"
-                android:text="registro"
-                android:textColor="#FAF9E6"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/sexo"
-                app:layout_constraintStart_toStartOf="@+id/sexo"
-                app:layout_constraintTop_toBottomOf="@id/aceptarCondiciones" />
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ovalo"
+        android:onClick="inscribirse"
+        android:padding="10dp"
+        android:text="registro"
+        android:textColor="#FAF9E6"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sexo"
+        app:layout_constraintStart_toStartOf="@+id/sexo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
-    </ScrollView>
 
 

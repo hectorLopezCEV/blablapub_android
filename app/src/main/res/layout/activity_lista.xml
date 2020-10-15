@@ -68,7 +68,7 @@
             android:src="@drawable/filtersign"
             android:visibility="visible"
             app:srcCompat="@drawable/filtersign"
-            tools:visibility="visible"></ImageView>
+            tools:visibility="visible"/>
 
     </RelativeLayout>
 

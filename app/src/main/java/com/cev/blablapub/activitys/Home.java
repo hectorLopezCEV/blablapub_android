@@ -13,17 +13,22 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.cev.blablapub.ListaDeNegocios;
 import com.cev.blablapub.adapters.MiAdapter;
 import com.cev.blablapub.Promocion;
 import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.R;
+
+import java.util.ArrayList;
 
 public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
     ListView listView;
     Negocio[] negocios = new Negocio[4];
-    //1 ArrayList<Elemento> bares;
+    ListaDeNegocios listNegocios;
+    SharedPreferences shared;
+    SharedPreferences.Editor editor;
     Menu menu;
 
 
@@ -35,6 +40,8 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.i("bla","//////HOME_oncreate");
+
+        listNegocios = new ListaDeNegocios();
 
         /*
         logica para nuestro toolbar, le metemos un if como capa de seguridad
@@ -52,6 +59,19 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         negocios[1]= new Negocio("BAR ROLLING",R.drawable.rolling, new Promocion("Descuento del 10%"));
         negocios[2]= new Negocio("BAR AVENIDA",R.drawable.brew, new Promocion("Barra libre de 21 a 22"));
         negocios[3]= new Negocio("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
+
+        // todo esto tenemos que hacerlo en el momento en el que el dueño del establecimiento se da de alta en el registro
+        listNegocios.negocios.add(negocios[0]);
+        listNegocios.negocios.add(negocios[1]);
+        listNegocios.negocios.add(negocios[2]);
+        listNegocios.negocios.add(negocios[3]);
+        // todo lo guardamos en shared pero tenemos que guardarlo en la bbdd
+        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+        editor = shared.edit();
+        editor.putString("negocios",listNegocios.toJson());
+        editor.apply();
+
+
         // todo hacer que los negocios se guarden en la base de datos y valorar si es mejor un arrayList
 
         // asociamos la imagen a nuestro template
