@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.cev.blablapub.activitys.Home;
 import com.cev.blablapub.activitys.RegisterActivity;
+import com.cev.blablapub.modelos.Usuario;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 public class DialogoLogin extends DialogFragment {
-
 
 
 

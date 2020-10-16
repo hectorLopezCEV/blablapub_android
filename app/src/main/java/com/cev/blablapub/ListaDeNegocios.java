@@ -22,7 +22,7 @@ public class ListaDeNegocios {
     // metodo gson para pasar un json a esta clase
     public ListaDeNegocios jsonToListaDeNegocios(String json){
         Gson gson = new Gson();
-        ListaDeNegocios listaDeNegocios = gson.fromJson(json,ListaDeNegocios.class);
-        return listaDeNegocios;
+        ListaDeNegocios negocios = gson.fromJson(json,ListaDeNegocios.class);
+        return negocios;
     }
 }

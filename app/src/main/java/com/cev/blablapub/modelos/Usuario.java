@@ -49,7 +49,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    // constructor
+    // constructor para el layout de los demas usuario siii le ponemos un nick( que no es que me guste mucho)
     public Usuario(int imagen, String nick,String mensaje){
         this.imagen = imagen;
         this.nick = nick;
@@ -57,9 +57,9 @@ public class Usuario {
     }  // constructor
 
 
-    public Usuario(int imagen, String nick){
+    public Usuario(int imagen, String mensaje){
         this.imagen = imagen;
-        this.nick = nick;
+        this.mensaje = mensaje;
     }
 
     // constructor

@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cev.blablapub.ListaDeNegocios;
 import com.cev.blablapub.adapters.GridAdapter;
@@ -26,7 +27,6 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
 
     /*
     los atribtos de clase llevan en primer lugar la letra de la clase a la que pertenecen, en este caso la v
-    aquellos atributos de otra clase que quiera usar empezaran por la letra de su clase ejem en la clase Home los atributos llevaran la h
      */
     ImageView v_imagen;
     TextView v_nomNegocio;
@@ -36,10 +36,9 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
     GridView v_gridView;
     // creamos un array de usuarios para pasarlos al adapter
     ArrayList<Usuario> usuarios;
-    String h_nombrePromocion,h_nomPub;
-    int h_imagenList;
+    String v_nombrePromocion,v_nomPub;
+    int v_imagenList;
     SharedPreferences shared;
-    ListaDeNegocios listaDeNegocios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,21 +57,6 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
 
         // todo hacer la peticion a la bbdd en vez de a las shared
         shared = getSharedPreferences("blablapub",MODE_PRIVATE);
-        String listjson = shared.getString("blablapub","");
-        Log.d("negocios",listjson);
-        if (!listjson.isEmpty()){
-            listaDeNegocios = new ListaDeNegocios();
-            listaDeNegocios = listaDeNegocios.jsonToListaDeNegocios(listjson);
-            for (Negocio n: listaDeNegocios.negocios
-                 ) {
-                Log.i("//////////negocios","negocio "+ n.getNombre()+" existe");
-            }
-        }else{
-            listaDeNegocios = new ListaDeNegocios();
-        }
-
-
-
 
         // LOGICA DEL ADPATER ///////
         // instancias para el adapter y rrellenado del array
@@ -117,18 +101,12 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
         //Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
 
         // compruebo el contenido del inten
-        h_imagenList = intent.getIntExtra("imagenList", 0);
-        h_nomPub = intent.getStringExtra("nombreList");
-        h_nombrePromocion = intent.getStringExtra("nombrePromocion");
-        v_imagen.setImageResource(h_imagenList);
-        v_nomNegocio.setText(h_nomPub);
-        v_anunNegocio.setText(h_nombrePromocion);
-
-
-
-
-
-
+        v_imagenList = intent.getIntExtra("imagenList", 0);
+        v_nomPub = intent.getStringExtra("nombreList");
+        v_nombrePromocion = intent.getStringExtra("nombrePromocion");
+        v_imagen.setImageResource(v_imagenList);
+        v_nomNegocio.setText(v_nomPub);
+        v_anunNegocio.setText(v_nombrePromocion);
     }
 
     /*
@@ -148,9 +126,9 @@ public class VistaDetalleBarActivity extends AppCompatActivity implements Adapte
         paso  el mismo diseño a el activity chat
          */
         Intent intent = new Intent(this, Chat_usuariosActivity.class);
-        intent.putExtra("anuncio",h_nombrePromocion);
-        intent.putExtra("nomPub",h_nomPub);
-        //intent.putExtra("imagen",listaDeNegocios.negocios.get(i).getImagen());
+        intent.putExtra("anuncio",v_nombrePromocion);
+        intent.putExtra("nomPub",v_nomPub);
+        intent.putExtra("imagenlist",v_imagenList);
         intent.putExtra("imagen_usuario",usuarios.get(i).getImagen());
         intent.putExtra("nick_usuario",usuarios.get(i).getNick());
 

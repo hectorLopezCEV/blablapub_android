@@ -32,7 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     EditText loginEmail;
     EditText loginPassword;
     Button loginButton;
+
+    //todo quitar cuando tengamos el logeo a la bbdd terminada
     SharedPreferences shared;
+    SharedPreferences.Editor editor;
+
 
 
 
@@ -61,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.edt_mail);
         loginPassword = findViewById(R.id.edt_password);
         loginButton = findViewById(R.id.loginButton);
-        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+
 
 
 
@@ -73,15 +77,16 @@ public class LoginActivity extends AppCompatActivity {
         // todo sustituir por la base de datos
         // hacer que lo que introduzca el usuario se vaya a la bbdd
         // de momento solo harcodeo el login del usuario
-
-        SharedPreferences.Editor editor = shared.edit();
+        // y en el adapter del chat lo valido por el id, pudiendo sustituir el login como parametro de validacion
+        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+        editor = shared.edit();
         editor.putString("login",loginEmail.getText().toString());
         editor.apply();
 
         // todo llamar a la bbdd y hacer la comprobacion del login
         // si el loin de la bbdd no es correcto mostramos el dialog yo lo harcodeo de momento con el null
 
-            if (loginEmail.getText().toString() != null){
+            if (loginEmail.getText().toString().isEmpty()){
 
                 DialogoLogin dialog = new DialogoLogin();
                 dialog.show(getSupportFragmentManager(),"dialogo_login");

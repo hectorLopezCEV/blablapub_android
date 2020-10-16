@@ -2,6 +2,7 @@ package com.cev.blablapub.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,11 +31,6 @@ public class ChatAdapter extends ArrayAdapter {
 
 
 
-    // metodo para añadir un mesaje
-    public void anadirMensaje(Usuario mensaje){
-
-    }
-
     public ChatAdapter(@NonNull Context context, int layout, @NonNull List<Usuario> objects) {
         super(context, layout, objects);
 
@@ -56,6 +52,12 @@ public class ChatAdapter extends ArrayAdapter {
 
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             convertView = layoutInflater.inflate(layout,parent,false);
+        }
+
+        if (convertView.findViewById(R.id.usuarios_layout).toString() == "usuarios_layout"){
+            Log.d("negoicos","es lel mismo id");
+        }else {
+            Log.d("negocios","no ees el mismo id");
         }
 
         // ahora que ya tenemos la vista inflada, entramos en ella y inflamos el contenido
