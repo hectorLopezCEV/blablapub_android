@@ -19,4 +19,5 @@
     <dimen name="dp_45">45dp</dimen>
     <dimen name="dp_55">55dp</dimen>
     <dimen name="dp_150">150</dimen>
+    <dimen name="dp_90">90dp</dimen>
 </resources>

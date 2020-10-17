@@ -78,22 +78,28 @@ public class LoginActivity extends AppCompatActivity {
         // hacer que lo que introduzca el usuario se vaya a la bbdd
         // de momento solo harcodeo el login del usuario
         // y en el adapter del chat lo valido por el id, pudiendo sustituir el login como parametro de validacion
-        shared = getSharedPreferences("blablapub",MODE_PRIVATE);
-        editor = shared.edit();
-        editor.putString("login",loginEmail.getText().toString());
-        editor.apply();
+
 
         // todo llamar a la bbdd y hacer la comprobacion del login
         // si el loin de la bbdd no es correcto mostramos el dialog yo lo harcodeo de momento con el null
 
-            if (loginEmail.getText().toString().isEmpty()){
+            if (loginEmail.getText().toString().isEmpty()){ // si el login esta vacio mostramos el dialog
 
                 DialogoLogin dialog = new DialogoLogin();
                 dialog.show(getSupportFragmentManager(),"dialogo_login");
-            }else{
+
+                Log.i("bla","///entra en el if y mostramos el dialog");
+                // todo cambiar el boton de cancelar para que no nos lleve al Home
+            }else{      // guardamos lo que hay escrito en la bd en este caso en la shared
+                shared = getSharedPreferences("blablapub",MODE_PRIVATE);
+                editor = shared.edit();
+                editor.putString("login",loginEmail.getText().toString());
+                editor.apply();
                 this.startActivity(new Intent(this, Home.class));
+                Log.i("bla","entra en el else y el valor del login enviando es = "+loginEmail.getText().toString());
 
             }
+
 
     }
 

@@ -13,6 +13,7 @@
         android:id="@+id/lyt_fofo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:layout_marginRight="@dimen/dp_10"
         android:orientation="horizontal">
 
@@ -21,7 +22,6 @@
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
                 android:src="@mipmap/loco"
-                app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp"
                 />
     </LinearLayout>
@@ -34,17 +34,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:orientation="vertical">
-            <!--
-            <TextView
-                android:id="@+id/txv_nick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_3"
-                android:text="apoddo"
-                android:textColor="@color/base"
-                android:textSize="?attr/listPreferredItemPaddingEnd" /> -->
-            <!-- texto -->
+         <!--
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_cardView"
                 android:elevation="@dimen/dp_25"
@@ -52,7 +44,7 @@
                 app:cardCornerRadius="@dimen/dp_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
+           -->
                 <TextView
                     android:id="@+id/txv_texto_mensaje_recibido"
                     android:layout_width="wrap_content"
@@ -61,13 +53,18 @@
                     android:paddingTop="@dimen/dp_5"
                     android:paddingRight="@dimen/dp_15"
                     android:paddingBottom="@dimen/dp_5"
-                    android:text=""
+                    android:background="@drawable/texto_mensaje"
                     android:textColor="#090909"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"/>
+
 
 
 </LinearLayout>

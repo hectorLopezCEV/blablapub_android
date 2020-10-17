@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.cev.blablapub.R;
 import com.cev.blablapub.adapters.ChatAdapter;
+import com.cev.blablapub.adapters.ChatEnviadoAdapter;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
@@ -74,10 +75,11 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         String nombrePromocion = intent.getStringExtra("anuncio");
         final int imagenUsuario = intent.getIntExtra("imagen_usuario",0);
         final String nick = intent.getStringExtra("nick_usuario");
-
         imageView.setImageResource(imagenList);
         nomPub.setText(nombreList);
         anuncioPub.setText(nombrePromocion);
+
+
         // todo logica para el chat, eliminar cuando este la bdd
         /* logica para mostrar el layout del usuario en el chat o el de las personas que hay en el local
         si el id de la bbdd coincide con el del usuario mandamos el layout del usuario
@@ -85,41 +87,43 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         de momento saco los datos harcodeados de las shared
          */
         shared = getSharedPreferences("blablapub",MODE_PRIVATE);
-        String usuario = shared.getString("login","defaul");
-        Log.d("negocios","el usuario es igual a = "+usuario);
-
-        if (usuario != "yo"){  //
-
-            final ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
-
-            boton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    // le paso al metodo del adapter el mensaje del usuario
-                    // como no tengo imagenes de usuarios en la bbdd los cojo del drawable
-                    chatAdapter.addMensaje(new Usuario(imagenUsuario,texto.getText().toString()));
-                    // todo hacer que el display del texto desaparezca cuando ya he escrito el texto
-                    listView.setAdapter(chatAdapter);
+        String login = shared.getString("login","defaul");
+        Log.i("bla","el usuario es igual a = "+login.toString());
 
 
-                }
-            });
-
-        }else{
-            if ( usuario == "yo"){
-                final ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_enviado,usuarios);
+        if ( login.equals("yo")){
+                final ChatEnviadoAdapter chatEnviadoAdapter = new ChatEnviadoAdapter(this,R.layout.layout_chat_enviado,usuarios);
 
                 boton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         // esta vez le paso el layout del usuario
-                        chatAdapter.addMensaje(new Usuario(texto.getText().toString()));
-                        listView.setAdapter(chatAdapter);
+                        chatEnviadoAdapter.addMensaje(new Usuario(texto.getText().toString()));
+                        listView.setAdapter(chatEnviadoAdapter);
 
                     }
                 });
-            }
+
+                Log.i("bla","entra en el if del chat");
+
+        }else {
+                final ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
+
+                boton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        // le paso al metodo del adapter el mensaje del usuario
+                        // como no tengo imagenes de usuarios en la bbdd los cojo del drawable
+                        chatAdapter.addMensaje(new Usuario(imagenUsuario,texto.getText().toString()));
+                        // todo hacer que el display del texto desaparezca cuando ya he escrito el texto
+                        listView.setAdapter(chatAdapter);
+
+
+                    }
+                });
+            Log.i("bla","entra en el el del chat");
+
 
         }
 

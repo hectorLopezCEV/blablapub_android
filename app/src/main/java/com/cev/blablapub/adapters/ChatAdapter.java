@@ -54,11 +54,6 @@ public class ChatAdapter extends ArrayAdapter {
             convertView = layoutInflater.inflate(layout,parent,false);
         }
 
-        if (convertView.findViewById(R.id.usuarios_layout).toString() == "usuarios_layout"){
-            Log.d("negoicos","es lel mismo id");
-        }else {
-            Log.d("negocios","no ees el mismo id");
-        }
 
         // ahora que ya tenemos la vista inflada, entramos en ella y inflamos el contenido
         // todo aqui tenemos que buscar en la base de datos el nombre  del usuario para pasrlo al inflador de momento lo harcodeo

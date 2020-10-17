@@ -1,50 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mi_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/dp_5"
-    android:orientation="vertical">
-
-    <!--
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_cardView"
-        android:elevation="@dimen/dp_25"
-        android:backgroundTint="#93F27980"
-        app:cardCornerRadius="@dimen/dp_5"
-        android:layout_margin="@dimen/dp_10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@color/base">
-        -->
+    android:padding="@dimen/dp_5">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:padding="@dimen/dp_5"
-            android:layout_marginLeft="@dimen/dp_60"
-            android:orientation="horizontal">
+            android:gravity="end"
+            android:layout_weight="2">
 
             <TextView
+                android:id="@+id/txv_texto_mensaje_enviado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dp_1"
-                android:paddingBottom="@dimen/dp_5"
-                android:paddingRight="@dimen/dp_10"
-                android:paddingLeft="@dimen/dp_10"
-                android:text="hola javiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiai"
+                android:layout_marginRight="@dimen/dp_15"
                 android:background="@drawable/diseno_chat_envio"
-                android:textColor="#090909"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_1"
+
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#090909" />
 
         </LinearLayout>
-
-
 
 
 
