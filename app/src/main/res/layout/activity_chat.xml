@@ -112,8 +112,8 @@
                 app:srcCompat="@drawable/outline_sentiment_satisfied_alt_24"
                 tools:ignore="VectorDrawableCompat"
                 android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/dp_7"
-                android:background="#FBE1E1E1"/>
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@color/blanco"/>
 
             <EditText
                 android:id="@+id/edt_chat_mensaje"

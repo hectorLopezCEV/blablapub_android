@@ -1,15 +1,12 @@
 package com.cev.blablapub.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,6 +19,7 @@ import com.cev.blablapub.adapters.ChatEnviadoAdapter;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Chat_usuariosActivity extends AppCompatActivity  {
 
@@ -48,7 +46,7 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_usuarios);
+        setContentView(R.layout.activity_chat);
         Log.i("bla","////////Chat usuatios");
 
         // instancias
@@ -92,36 +90,53 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
 
 
         if ( login.equals("yo")){
-                final ChatEnviadoAdapter chatEnviadoAdapter = new ChatEnviadoAdapter(this,R.layout.layout_chat_enviado,usuarios);
+                final ChatEnviadoAdapter chatEnviadoAdapter = new ChatEnviadoAdapter(this, R.layout.layout_chat_enviado, usuarios);
 
                 boton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        // esta vez le paso el layout del usuario
-                        chatEnviadoAdapter.addMensaje(new Usuario(texto.getText().toString()));
-                        listView.setAdapter(chatEnviadoAdapter);
+                        // comprobamos que hay algo esrcrito en el editex
+                        if(!texto.getText().toString().isEmpty()) {
+                            // esta vez le paso el layout del usuario
+                            chatEnviadoAdapter.addMensaje(new Usuario(texto.getText().toString()));
+                            listView.setAdapter(chatEnviadoAdapter);
+                            listView.setSelection(usuarios.size() -1);
+                            // vaciamos las letras del usuario en el editex
+
+                            texto.setText("");
+                        }
 
                     }
                 });
+
 
                 Log.i("bla","entra en el if del chat");
 
         }else {
-                final ChatAdapter chatAdapter = new ChatAdapter(this,R.layout.layout_chat_recibido,usuarios);
+
+            final ChatAdapter chatAdapter = new ChatAdapter(getBaseContext(), R.layout.layout_chat_recibido, usuarios);
 
                 boton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        // comprobamos que hay algo esrcrito en el editex
+                        if(!texto.getText().toString().isEmpty()) {
 
-                        // le paso al metodo del adapter el mensaje del usuario
-                        // como no tengo imagenes de usuarios en la bbdd los cojo del drawable
-                        chatAdapter.addMensaje(new Usuario(imagenUsuario,texto.getText().toString()));
-                        // todo hacer que el display del texto desaparezca cuando ya he escrito el texto
-                        listView.setAdapter(chatAdapter);
+                            // le paso al metodo del adapter el mensaje del usuario
+                            // como no tengo imagenes de usuarios en la bbdd los cojo del drawable
+                            chatAdapter.addMensaje(new Usuario(imagenUsuario, texto.getText().toString()));
+                            // todo hacer que el display del texto desaparezca cuando ya he escrito el texto
+                            listView.setAdapter(chatAdapter);
+                            listView.setSelection(usuarios.size() -1);
+
+                            // vaciamos las letras del usuario en el editex
+                            texto.setText("");
+                        }
 
 
                     }
                 });
+
             Log.i("bla","entra en el el del chat");
 
 

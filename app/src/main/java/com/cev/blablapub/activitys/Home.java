@@ -3,6 +3,7 @@ package com.cev.blablapub.activitys;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import com.cev.blablapub.R;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Home extends AppCompatActivity     {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////
 
     ListView listView;
@@ -34,6 +35,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,12 +78,15 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
         // asociamos la imagen a nuestro template
         listView = findViewById(R.id.lisv_listaImagenes);
-        listView.setOnItemClickListener(this);
+
+        //listView.setOnItemClickListener(this);
 
         // juntamos los datos de las imagenes y el listview con mi adapter
         MiAdapter miAdapter = new MiAdapter(this,R.layout.item,negocios);
         // le pasamos a la lista el adapter
         listView.setAdapter(miAdapter);
+
+
     }
 
     @Override
@@ -89,9 +94,11 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         super.onResume();
     }
 
+/*
     // click para la vista detalle
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+
 
         Intent intent = new Intent(this, VistaDetalleBarActivity.class);
         intent.putExtra("imagenList",this.negocios[i].getImagen());
@@ -100,7 +107,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         startActivity(intent);
     }
 
-
+ */
 
 
 }

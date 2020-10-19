@@ -59,8 +59,9 @@
     <LinearLayout
         android:id="@+id/layout_iconos"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:padding="3dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +75,14 @@
             android:layout_gravity="start"
             android:layout_marginLeft="@dimen/dp_5"
             tools:ignore="VectorDrawableCompat"
-            android:layout_marginRight="5dp"
             />
+
+        <TextView
+            android:id="@+id/txv_home_numeros_megusta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="visible"/>
     </LinearLayout>
 
     <!-- mano comentario y tema musical-->
@@ -152,6 +159,7 @@
 
         <!-- tipo de musica -->
         <LinearLayout
+            android:id="@+id/lyt_megusta_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -167,7 +175,7 @@
                 tools:ignore="VectorDrawableCompat" />
 
             <TextView
-                android:id="@+id/txv_mucica"
+                android:id="@+id/txv_meGusta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_5"
