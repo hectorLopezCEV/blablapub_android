@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cev.blablapub.R;
+import com.cev.blablapub.activitys.Comentarios_del_negocio;
 import com.cev.blablapub.activitys.Home;
 import com.cev.blablapub.activitys.VistaDetalleBarActivity;
 import com.cev.blablapub.modelos.Negocio;
@@ -26,6 +27,8 @@ import androidx.annotation.Nullable;
 
 /*
     Adapter para el home
+    donde vamos a definir todas las acciones
+    que van a hacer los usuarios en el Home, como megustas,comentarios...
  */
 
 public class MiAdapter extends ArrayAdapter {
@@ -59,7 +62,6 @@ public class MiAdapter extends ArrayAdapter {
         TextView textView = convertView.findViewById(R.id.txv_nombre_establecimiento);
         textView.setText(negocios[position].getTexto());
 
-        final TextView cantidad_de_megustas = convertView.findViewById(R.id.txv_home_numeros_megusta);
 
         // hacemos lo mismo con la vista la busdcamos en nuestro layout y le pasamos nuestra imagen
         // le ponemos el onclicklistener solo a la vista
@@ -79,14 +81,28 @@ public class MiAdapter extends ArrayAdapter {
         });
 
         // ponemos un onclickListener a cada elemento
+        final TextView total_de_megustas = convertView.findViewById(R.id.txv_home_numeros_megusta);
         TextView meGusta = convertView.findViewById(R.id.txv_meGusta);
         meGusta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 numero_me_gusta = +1; // de esta manera solo pueden sumar uno cada usuario //todo hacer que esta cantidad venga de la bbdd
-                cantidad_de_megustas.setText(Integer.toString(numero_me_gusta));
+                total_de_megustas.setText(Integer.toString(numero_me_gusta));
 
+            }
+        });
+
+        // ponemos un onclick a los comentarios
+        TextView comentarios = convertView.findViewById(R.id.txv_comentarios);
+        comentarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), Comentarios_del_negocio.class);
+                intent.putExtra("imageNegocio",negocios[position].getImagen());
+                intent.putExtra("nombreList",negocios[position].getTexto());
+                intent.putExtra("nombrePromocion",negocios[position].getPromocion().titulo);
+                context.startActivity(intent);
             }
         });
 

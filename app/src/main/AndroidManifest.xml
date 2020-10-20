@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.Chat_usuariosActivity"></activity>
+        <activity android:name=".activitys.Comentarios_del_negocio"></activity>
+        <activity android:name=".activitys.Chat_usuariosActivity" />
         <activity
             android:name=".activitys.LoginActivity"
             android:parentActivityName=".activitys.MainActivity" />
-        <activity android:name=".activitys.MainActivity" android:theme="@style/SplashTheme">
+        <activity
+            android:name=".activitys.MainActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +36,10 @@
             android:name=".activitys.VistaDetalleBarActivity"
             android:parentActivityName=".activitys.Home" />
         <activity android:name=".ListActivityBares" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

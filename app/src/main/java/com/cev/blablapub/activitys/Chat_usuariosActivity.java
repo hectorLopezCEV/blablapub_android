@@ -57,7 +57,6 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
         nomPub = findViewById(R.id.txv_chat_nombreNegocio);
         texto = findViewById(R.id.edt_chat_mensaje);
         boton = findViewById(R.id.btn_imageButton);
-
         usuarios = new ArrayList<Usuario>();
 
 
@@ -114,7 +113,7 @@ public class Chat_usuariosActivity extends AppCompatActivity  {
 
         }else {
 
-            final ChatAdapter chatAdapter = new ChatAdapter(getBaseContext(), R.layout.layout_chat_recibido, usuarios);
+            final ChatAdapter chatAdapter = new ChatAdapter(this, R.layout.layout_chat_recibido, usuarios);
 
                 boton.setOnClickListener(new View.OnClickListener() {
                     @Override

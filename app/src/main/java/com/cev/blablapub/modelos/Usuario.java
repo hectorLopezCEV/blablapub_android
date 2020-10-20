@@ -1,5 +1,6 @@
 package com.cev.blablapub.modelos;
 
+import com.cev.blablapub.R;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class Usuario {
     private boolean n_a;
     private int edad;
     private boolean conectado;
-    private int imagen_por_defecto;
+    private int imagen_por_defecto = R.drawable.logo;
     private String mensaje;
 
 

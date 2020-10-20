@@ -63,6 +63,7 @@ public class Home extends AppCompatActivity     {
         negocios[3]= new Negocio("BAR CENTRAL", R.drawable.conil, new Promocion("Segunda persona entra gratis"));
 
         // todo esto tenemos que hacerlo en el momento en el que el dueño del establecimiento se da de alta en el registro
+        // valorar con Hector esta lista ( no es funcional)
         listNegocios.negocios.add(negocios[0]);
         listNegocios.negocios.add(negocios[1]);
         listNegocios.negocios.add(negocios[2]);

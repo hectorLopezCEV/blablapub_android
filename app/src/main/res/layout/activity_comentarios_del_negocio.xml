@@ -1,9 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activitys.Comentarios_del_negocio">
+
+    <TextView
+        android:id="@+id/txv_comentarios_nombreNegocio"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingRight="@dimen/dp_25"
+        android:text="Ejemplo de negocio"
+        android:textColor="@color/base"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lyt_flecha_comentarios"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lyt_flecha_comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:paddingLeft="@dimen/dp_3"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_comentarios_flecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="volverHome"
+            app:srcCompat="@drawable/outline_arrow_back_24"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_comentarios_imagenNegocio"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rolling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_comentarios_nombreNegocio" />
+
+    <TextView
+        android:id="@+id/txv_comentarios_anuncioNegocio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/anuncios"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text="Barra libre a las 5:00"
+        android:textColor="@color/base"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_comentarios_imagenNegocio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/lisv_comentarios"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lyt_comentarios_enviarMensajes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_comentarios_imagenNegocio" />
+
+    <!-- contenedor padre  -->
+
+    <LinearLayout
+        android:id="@+id/lyt_comentarios_enviarMensajes"
+        android:padding="@dimen/dp_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="horizontal"
+        android:background="@drawable/rolling"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- TEXTO  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            android:background="@drawable/texto_mensaje"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+
+            <ImageButton
+                android:id="@+id/imageButton2_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/outline_sentiment_satisfied_alt_24"
+                tools:ignore="VectorDrawableCompat"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@color/blanco"/>
+
+            <EditText
+                android:id="@+id/edt_comentarios_mensaje"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:hint="@string/escribe_un_mensaje" />
+
+        </LinearLayout>
+        <!-- boton enviar -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_imageButton_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_3"
+                android:onClick="addComentario"
+                app:srcCompat="@android:drawable/ic_menu_send"
+                android:background="@drawable/circulo_enviar"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
