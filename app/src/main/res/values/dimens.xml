@@ -21,4 +21,5 @@
     <dimen name="dp_150">150</dimen>
     <dimen name="dp_90">90dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
 </resources>
