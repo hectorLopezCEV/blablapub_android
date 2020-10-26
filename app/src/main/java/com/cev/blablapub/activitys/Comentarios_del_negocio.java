@@ -16,6 +16,7 @@ import com.cev.blablapub.adapters.ComentariosAdapter;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Comentarios_del_negocio extends AppCompatActivity {
@@ -29,6 +30,7 @@ public class Comentarios_del_negocio extends AppCompatActivity {
     private EditText c_texto;
     private ImageButton c_boton;
     private ArrayList<Usuario> c_usuarios;
+    private ComentariosAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,18 +59,23 @@ public class Comentarios_del_negocio extends AppCompatActivity {
         c_promoiconDeNegocio.setText(promocion);
         c_imagenNegocio.setImageResource(imagenNegocio);
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        // mostramos la lista ////////////////////////////////////////////////////////////////////////
+        //Collections.reverse(c_usuarios);
+        // todo pasar los usuarios de la bbdd
+        adapter = new ComentariosAdapter(this,R.layout.comentarios_recibidos,c_usuarios);
+        c_listView.setAdapter(adapter);
+        c_listView.setDivider(null);
+        //////////////////////////////////////////////////////////////////////////////////////////////////
     }
 
     public void addComentario(View v){
         if(!c_texto.getText().toString().isEmpty()){
-            // todo pasar los usuarios de la bbdd
-            ComentariosAdapter adapter = new ComentariosAdapter(this,R.layout.comentarios_recibidos,c_usuarios);
+            // todo pasar los usuarios de la bbdd mas la imagen del usuario
             adapter.addMensaje(new Usuario(c_texto.getText().toString()));
-
-            // todo sustituir con la imagen de nuestro usuario
-            c_listView.setAdapter(adapter);
-
-            c_listView.setDivider(null);
+            c_listView.setSelection(c_usuarios.size() -1); // hace que la lista vaya hacia arriba
             c_texto.setText("");
         }
     }

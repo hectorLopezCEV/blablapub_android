@@ -1,5 +1,6 @@
 package com.cev.blablapub.adapters;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +75,8 @@ public class ComentariosAdapter extends ArrayAdapter {
 
         return convertView;
     }
+
+
 
     public void addMensaje(Usuario mensaje){
         usuarios.add(mensaje);

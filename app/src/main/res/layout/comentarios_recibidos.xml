@@ -45,14 +45,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/dp_4"
-            android:fontFamily="sans-serif"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="@dimen/dp_12"
             android:paddingTop="@dimen/dp_3"
             android:paddingRight="@dimen/dp_10"
-            android:paddingLeft="@dimen/dp_12"
             android:text="goriito"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@android:color/primary_text_light"
-            android:textSize="14dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/txv_texto_comentario_recibido"
@@ -63,8 +63,9 @@
             android:paddingRight="@dimen/dp_10"
             android:paddingBottom="@dimen/dp_5"
             android:text="goriitoooooooooooooo"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/cardview_dark_background" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16dp" />
 
 
     </LinearLayout>
