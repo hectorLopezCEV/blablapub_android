@@ -75,6 +75,7 @@
         android:id="@+id/lisv_chat"
         android:layout_width="413dp"
         android:layout_height="0dp"
+
         app:layout_constraintBottom_toTopOf="@+id/lyt_chat_enviarMensajes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

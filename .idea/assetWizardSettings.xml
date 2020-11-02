@@ -220,7 +220,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_volume_up_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_mail_outline_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -230,9 +230,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="030303" />
-                            <entry key="opacityPercent" value="40" />
-                            <entry key="outputName" value="musica" />
+                            <entry key="color" value="020202" />
+                            <entry key="opacityPercent" value="80" />
+                            <entry key="outputName" value="email" />
                             <entry key="sourceFile" value="C:\Users\jakiv" />
                           </map>
                         </option>

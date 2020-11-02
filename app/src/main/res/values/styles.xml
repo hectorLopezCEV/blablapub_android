@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. sustituto DarkActionBar por NoActionBar para personificar nuestro appBara -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/acen</item>
     </style>
 
-    <style name="SplashTheme" parent="AppTheme">
+    <style name="SplashTheme" parent="AppTheme" >
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
