@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.modelos;
 
 import android.content.Context;
 import android.os.AsyncTask;

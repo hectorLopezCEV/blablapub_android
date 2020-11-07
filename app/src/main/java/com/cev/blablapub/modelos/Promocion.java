@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.modelos;
 
 public class Promocion {
 

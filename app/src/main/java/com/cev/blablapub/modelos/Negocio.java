@@ -1,9 +1,6 @@
 package com.cev.blablapub.modelos;
 
-import com.cev.blablapub.Promocion;
 import com.google.gson.Gson;
-
-import java.util.ArrayList;
 
 // creo que se puede eliminar esta clase, eperaremos un podo
 

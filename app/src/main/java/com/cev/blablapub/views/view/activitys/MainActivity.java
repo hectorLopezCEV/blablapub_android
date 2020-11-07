@@ -1,4 +1,4 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,10 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
-import com.cev.blablapub.LoginService;
+import com.cev.blablapub.modelos.LoginService;
 import com.cev.blablapub.R;
-import com.cev.blablapub.activitys.LoginActivity;
-import com.cev.blablapub.activitys.RegisterActivity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +25,7 @@ import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener  {
-    public static final String EXTRA_MESSAGE = "com.cev.blablapub.activitys.RegisterActivity.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.cev.blablapub.com.cev.blablapub.views.activitys.views.com.cev.blablapub.com.cev.blablapub.views.activitys.views.activitys.activitys.RegisterActivity.MESSAGE";
 
     Button login;
     Button registro;
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         if(login.equals("javi")){
             Toast.makeText(this,"Bienvenido  "+ login,Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this,Home.class);
+            Intent intent = new Intent(this, Home.class);
             startActivity(intent);
             finish();
         }

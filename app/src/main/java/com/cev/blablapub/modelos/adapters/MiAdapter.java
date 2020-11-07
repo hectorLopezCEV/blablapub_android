@@ -1,24 +1,18 @@
-package com.cev.blablapub.adapters;
+package com.cev.blablapub.modelos.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cev.blablapub.R;
-import com.cev.blablapub.activitys.Comentarios_del_negocio;
-import com.cev.blablapub.activitys.Home;
-import com.cev.blablapub.activitys.VistaDetalleBarActivity;
+import com.cev.blablapub.views.view.activitys.Comentarios_del_negocio;
+import com.cev.blablapub.views.view.activitys.VistaDetalleBarActivity;
 import com.cev.blablapub.modelos.Negocio;
 
 import androidx.annotation.NonNull;

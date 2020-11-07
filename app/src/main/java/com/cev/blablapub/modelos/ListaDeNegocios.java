@@ -1,6 +1,5 @@
-package com.cev.blablapub;
+package com.cev.blablapub.modelos;
 
-import com.cev.blablapub.modelos.Negocio;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

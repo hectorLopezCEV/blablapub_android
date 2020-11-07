@@ -1,4 +1,4 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,12 +12,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cev.blablapub.R;
-import com.cev.blablapub.adapters.ComentariosAdapter;
+import com.cev.blablapub.modelos.adapters.ComentariosAdapter;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Comentarios_del_negocio extends AppCompatActivity {
 
@@ -82,7 +80,7 @@ public class Comentarios_del_negocio extends AppCompatActivity {
 
     // volver a la pantalla de Home
     public void volverHome(View v){
-        Intent intent = new Intent(this,Home.class);
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
         finish();
     }

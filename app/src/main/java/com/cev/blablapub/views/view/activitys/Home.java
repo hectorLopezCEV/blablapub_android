@@ -1,26 +1,20 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.cev.blablapub.ListaDeNegocios;
-import com.cev.blablapub.adapters.MiAdapter;
-import com.cev.blablapub.Promocion;
+import com.cev.blablapub.modelos.ListaDeNegocios;
+import com.cev.blablapub.modelos.adapters.MiAdapter;
+import com.cev.blablapub.modelos.Promocion;
 import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.R;
-
-import java.util.ArrayList;
 
 public class Home extends AppCompatActivity     {
     // 1 // POSIBLE INTENTO DE UN ARRAYLIST PARA UNA LISTA DINAMICA////

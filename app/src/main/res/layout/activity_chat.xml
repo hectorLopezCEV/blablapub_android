@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activitys.Chat_usuariosActivity">
+    tools:context=".views.view.activitys.Chat_usuariosActivity">
 
     <TextView
         android:id="@+id/txv_chat_nombreNegocio"

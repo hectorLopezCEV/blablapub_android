@@ -1,8 +1,10 @@
-package com.cev.blablapub;
+package com.cev.blablapub.modelos;
 
 import android.os.AsyncTask;
 
-import com.cev.blablapub.activitys.MainActivity;
+import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.JWToken;
+import com.cev.blablapub.views.view.activitys.MainActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;

@@ -1,9 +1,8 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,17 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.cev.blablapub.DialogoLogin;
+import com.cev.blablapub.views.view.views.DialogoLogin;
 import com.cev.blablapub.R;
-import com.cev.blablapub.RecuperarCon;
-import com.cev.blablapub.activitys.Home;
-import com.cev.blablapub.modelos.Usuario;
+import com.cev.blablapub.modelos.RecuperarCon;
 
 public class LoginActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.cev.blablapub.activitys.RegisterActivity.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.cev.blablapub.com.cev.blablapub.views.activitys.views.com.cev.blablapub.com.cev.blablapub.views.activitys.views.activitys.activitys.RegisterActivity.MESSAGE";
 
 
     Button login;

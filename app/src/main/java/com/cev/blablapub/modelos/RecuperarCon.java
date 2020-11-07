@@ -1,4 +1,4 @@
-package com.cev.blablapub;
+package com.cev.blablapub.modelos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
+import com.cev.blablapub.R;
+import com.cev.blablapub.modelos.PeticionPost;
 
 public class RecuperarCon extends AppCompatActivity {
     // conexion de las variables del html

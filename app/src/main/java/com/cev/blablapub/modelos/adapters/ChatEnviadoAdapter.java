@@ -1,4 +1,4 @@
-package com.cev.blablapub.adapters;
+package com.cev.blablapub.modelos.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.cev.blablapub.ListaBares;
 import com.cev.blablapub.R;
 import com.cev.blablapub.modelos.Usuario;
 

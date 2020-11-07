@@ -1,4 +1,4 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +13,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.cev.blablapub.PetitionsPost;
+import com.cev.blablapub.modelos.PetitionsPost;
 import com.cev.blablapub.R;
-import com.cev.blablapub.activitys.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText nombre;

@@ -1,4 +1,4 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,12 +12,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.cev.blablapub.ListaDeNegocios;
-import com.cev.blablapub.adapters.GridAdapter;
+import com.cev.blablapub.modelos.adapters.GridAdapter;
 import com.cev.blablapub.R;
-import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;

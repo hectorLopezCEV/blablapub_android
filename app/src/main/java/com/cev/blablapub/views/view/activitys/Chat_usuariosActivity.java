@@ -1,4 +1,4 @@
-package com.cev.blablapub.activitys;
+package com.cev.blablapub.views.view.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,12 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cev.blablapub.R;
-import com.cev.blablapub.adapters.ChatAdapter;
-import com.cev.blablapub.adapters.ChatEnviadoAdapter;
+import com.cev.blablapub.modelos.adapters.ChatAdapter;
+import com.cev.blablapub.modelos.adapters.ChatEnviadoAdapter;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Chat_usuariosActivity extends AppCompatActivity  {
 

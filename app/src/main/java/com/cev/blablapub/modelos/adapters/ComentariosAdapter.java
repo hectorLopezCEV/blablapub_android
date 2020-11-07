@@ -1,6 +1,5 @@
-package com.cev.blablapub.adapters;
+package com.cev.blablapub.modelos.adapters;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,13 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cev.blablapub.ListaDeNegocios;
 import com.cev.blablapub.R;
-import com.cev.blablapub.modelos.Negocio;
 import com.cev.blablapub.modelos.Usuario;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

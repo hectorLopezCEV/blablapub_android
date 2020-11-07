@@ -23,7 +23,7 @@
     <string name="repite_password">Confirma password</string>
     <string name="nombre_no_es_tu_nick">Nombre (no el alias)</string>
     <string name="title_activity_comentarios_del_negocio">ComentariosDelNegocio</string>
-    <!-- Strings used for fragments for navigation -->
+    <!-- Strings used for com.cev.blablapub.com.cev.blablapub.views.activitys.views.com.cev.blablapub.com.cev.blablapub.views.activitys.views.activitys.activitys.fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

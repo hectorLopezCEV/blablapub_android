@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.Comentarios_del_negocio"></activity>
-        <activity android:name=".activitys.Chat_usuariosActivity" />
+        <activity android:name=".views.view.activitys.Comentarios_del_negocio"></activity>
+        <activity android:name=".views.view.activitys.Chat_usuariosActivity" />
         <activity
-            android:name=".activitys.LoginActivity"
-            android:parentActivityName=".activitys.MainActivity" />
+            android:name=".views.view.activitys.LoginActivity"
+            android:parentActivityName=".views.view.activitys.MainActivity" />
         <activity
-            android:name=".activitys.MainActivity"
+            android:name=".views.view.activitys.MainActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,15 +26,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecuperarCon"
-            android:parentActivityName=".activitys.LoginActivity" />
+            android:name=".modelos.RecuperarCon"
+            android:parentActivityName=".views.view.activitys.LoginActivity" />
         <activity
-            android:name=".activitys.RegisterActivity"
-            android:parentActivityName=".activitys.LoginActivity" />
-        <activity android:name=".activitys.Home" />
+            android:name=".views.view.activitys.RegisterActivity"
+            android:parentActivityName=".views.view.activitys.LoginActivity" />
+        <activity android:name=".views.view.activitys.Home" />
         <activity
-            android:name=".activitys.VistaDetalleBarActivity"
-            android:parentActivityName=".activitys.Home" />
+            android:name=".views.view.activitys.VistaDetalleBarActivity"
+            android:parentActivityName=".views.view.activitys.Home" />
         <activity android:name=".ListActivityBares" />
 
         <meta-data
