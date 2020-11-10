@@ -85,25 +85,30 @@ public class Home extends AppCompatActivity     {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("home","/////////////////onStart");
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        Log.d("home","//////////////onResume");
+
     }
 
-/*
-    // click para la vista detalle
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+    protected void onStop() {
+        super.onStop();
+        Log.d("home","///////////////onStop");
 
-
-        Intent intent = new Intent(this, VistaDetalleBarActivity.class);
-        intent.putExtra("imagenList",this.negocios[i].getImagen());
-        intent.putExtra("nombreList",this.negocios[i].getTexto());
-        intent.putExtra("nombrePromocion",this.negocios[i].getPromocion().titulo);
-        startActivity(intent);
     }
 
- */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("home","//////////////onDestroy");
 
-
+    }
 }
 
